@@ -1,0 +1,63 @@
+<section class="login-block p-t-b-100">
+  <!-- Container-fluid starts -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="assets/images/auth/icon-archivo.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 p-t-100">
+        <div class="text-white">
+          <h1>Bienvenido a SADD</h1>
+          <p class="s-18 p-t-b-20 font-weight-lighter">Optimice sus procesos de negocio archivando digitalmente los
+            documentos.</p>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group input-group-lg">
+                <span class="input-group-prepend">
+                  <label class="input-group-text"><i class="fa fa-user"></i></label>
+                </span>
+                <input type="text" class="form-control" placeholder="Username" formControlName="username"
+                  [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                <!-- <div *ngIf="f.username.errors.required">
+                  <span class="messages"><p class="text-danger error">Username requerido</p></span>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="input-group input-group-lg">
+                <span class="input-group-prepend">
+                  <label class="input-group-text"><i class="fa fa-key"></i></label>
+                </span>
+                <input type="password" class="form-control" placeholder="Password" formControlName="password"
+                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <!-- <div *ngIf="f.password.errors.required">
+                      <span class="messages"><p class="text-danger error">Password requerido</p></span>
+                    </div> -->
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <input type="submit" [disabled]="loading" class="btn btn-success btn-lg btn-block" value="Entrar">
+              <!-- <img *ngIf="loading" class="pl-2"
+                src="http://freepreloaders.com/wp-content/uploads/2019/05/index.rotate-pie-preloader-gif.svg" /> -->
+            </div>
+            <div class="col-lg-12 m-t-10">
+              <div *ngIf="error" class="alert alert-danger background-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <i class="icofont icofont-close-line-circled text-white"></i>
+                </button>
+                <strong>Error !</strong> {{error}}
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- end of container-fluid -->
+</section>
+<div class="footer">
+  <p class="text-center m-b-0">Copyright &copy; 2019 QUITEC - SADD , All rights reserved.</p>
+</div>
