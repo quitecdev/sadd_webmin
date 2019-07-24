@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DatatableComponent} from '@swimlane/ngx-datatable';
 import { Dashboard } from "../../models/dashboard";
 import { DocumentosRecientes } from "../../models/documentosRecientes";
 import { DashboardService } from "../../services/dashboard.service";
@@ -10,16 +11,19 @@ import { DashboardService } from "../../services/dashboard.service";
 })
 export class DashboardComponent implements OnInit {
 
-  dashboar: Dashboard={
-    indices:"0",
-    documentos:"0",
-    paginas:"0",
-    disco:"0"
-  };
+  dashboar: Dashboard={};
   error = '';
   loading = false;
-
   documentos: DocumentosRecientes[];
+  num: number = 0;
+  option = {
+    startVal: this.num,
+    useEasing: true,
+    duration: 2,
+    decimalPlaces: 2,
+  };
+  interval: any;
+  currentView: string;
 
   constructor(
     private _dashboardService: DashboardService
@@ -71,6 +75,4 @@ export class DashboardComponent implements OnInit {
       }
     );
   }
-
-
 }
