@@ -17,8 +17,8 @@ const routes: Routes = [
       },
       {
         path: 'busqueda',
-        loadChildren: './theme/busqueda/busqueda.module#BusquedaModule',
-        canActivate: [AuthGuard]
+        loadChildren: './theme/busqueda/busqueda.module#BusquedaModule'
+        //canActivate: [AuthGuard]
       },
       {
         path: 'dashboard',
