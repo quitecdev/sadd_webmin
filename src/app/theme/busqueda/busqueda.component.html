@@ -1,76 +1,82 @@
 <div class="page-body">
-  <div class="row">
-    <div class="col-sm-12">
-      <!-- Search result 2 card start -->
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Search result 2 card start -->
 
-      <div class="card">
-        <div class="card-block">
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-              <p class="txt-highlight text-center m-t-20">
-                La potencia de la búsqueda por metadatos evita que la información se pierda en el sistema y maximiza su
-                valor poniéndola a disposición del usuario cuando lo necesita.
-              </p>
-            </div>
-          </div>
+            <div class="card">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3">
+                            <p class="txt-highlight text-center m-t-20">
+                                La potencia de la búsqueda por metadatos evita que la información se pierda en el sistema y maximiza su valor poniéndola a disposición del usuario cuando lo necesita.
+                            </p>
+                        </div>
+                    </div>
 
-          <div class="row seacrh-header">
-            <div class="col-lg-4 offset-lg-4 offset-sm-3 col-sm-6 offset-sm-1 col-xs-12">
-              <form class="form-material" [formGroup]="busquedaRapidaForm" (ngSubmit)="busquedaRapida()">
-                <div class="md-group-add-on form-group form-primary">
-                  <span class="md-add-on-file">
-                    <!-- <button class="btn btn-primary waves-effect waves-light"
-                        (click)="busquedaRapida('17855401')">Buscar</button> -->
-                    <button type="button" class="btn btn-primary waves-effect waves-light">
-                      Busqueda
-                    </button>
+                    <div class="row seacrh-header">
+                        <div class="col-lg-4 offset-lg-4 offset-sm-3 col-sm-6 offset-sm-1 col-xs-12">
+                            <form class="form-material" [formGroup]="busquedaRapidaForm" (ngSubmit)="busquedaRapida()">
+                                <div class="md-group-add-on form-group form-primary">
+                                    <span class="md-add-on-file">
+                    <button class="btn btn-primary waves-effect waves-light">Busqueda</button>
                   </span>
 
-                  <div class="md-input-file">
-                    <input type="text" class="form-control" placeholder="Buscar aquí ...."
-                      formControlName="palabraRapida" [ngClass]="{ 'is-invalid': submitted && f.palabraRapida.errors }">
-                    <span class="form-bar"></span>
-                    <div *ngIf="f.palabraRapida.errors.required">
-                      <span class="messages">
+                                    <div class="md-input-file">
+                                        <input type="text" class="form-control" placeholder="Buscar aquí ...." formControlName="palabraRapida" [ngClass]="{ 'is-invalid': submitted && f.palabraRapida.errors }" />
+                                        <span class="form-bar"></span>
+                                        <div *ngIf="submitted && f.palabraRapida.errors">
+                                            <span class="messages">
                         <p class="text-danger error">Ingrese un indice de busqueda</p>
                       </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </form>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Search result 2 card end -->
+            <!-- Search result 2 card end -->
 
-      <h4 class="m-b-20">
-        <b>20</b> Search Results Found
-      </h4>
+            <h4 class="m-b-20">
+                <b>20</b> Search Results Found
+            </h4>
 
-      <div class="row">
-        <!-- Search result found start -->
-        <div class="col-lg-12 col-xl-8 search2 search-result">
-          <div class="row">
+            <div class="row">
+                <!-- Search result found start -->
 
-            <div class="col-xl-12 col-md-12" *ngFor="let documento of documentos">
-              <div class="card social-user o-hidden">
-                <div class="card-header">
-                  <h5>
-                    Libreria: {{documento.libNombre}}
+                <div class="col-lg-12 col-xl-8 search2 search-result">
+                    <div class="row">
+                        <div class="col-lg-12 m-t-10">
+                            <div *ngIf="error" class="alert alert-danger background-danger">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <i class="icofont icofont-close-line-circled text-white"></i>
+                </button>
 
-                    <span class="text-muted d-inline-block m-l-5">Páginas: {{documento.arcPaginas}}</span>
-                  </h5>
-                </div>
+                                <strong>Error !</strong> {{error}}
+                            </div>
+                        </div>
 
-                <div class="row no-gutters">
-                  <div class="col-md-3">
-                    <img [src]="documento.pagMini" class="img-fluid">
-                  </div>
+                        <div class="col-xl-12 col-md-12" *ngFor="let documento of documentos">
+                            <div class="card social-user o-hidden">
+                                <div class="card-header">
+                                    <h5>
+                                        Libreria: {{documento.libNombre}}
 
-                  <div class="col-md-9">
-                    <!-- <div class="card-block">
+                                        <span class="text-muted d-inline-block m-l-5">
+                      Páginas: {{documento.arcPaginas}}
+                    </span>
+                                    </h5>
+                                </div>
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img [src]="documento.pagMini" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <!-- <div class="card-block">
                       <div class="row align-items-center">
                         <div class="col">
                           <dl class="dl-horizontal row">
@@ -104,16 +110,15 @@
                         </div>
                       </div>
                     </div> -->
-                  </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
 
-          </div>
-        </div>
-
-        <!-- Search result found end -->
-        <!-- <div class="col-lg-12 col-xl-4">
+                <!-- Search result found end -->
+                <!-- <div class="col-lg-12 col-xl-4">
                     <div class="card card-main">
                         <div class="card-header">
                             <h5 class="card-header-text">Filter</h5>
@@ -146,7 +151,7 @@
                         </div>
                     </div>
                 </div> -->
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

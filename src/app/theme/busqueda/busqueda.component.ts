@@ -46,24 +46,23 @@ export class BusquedaComponent implements OnInit {
     }
 
     this.loading = true;
-    console.log(this.busquedaRapidaForm)
-    // this._documentoService.getDocumentoBusquedaRapida(this.busquedaRapidaForm.pa)
-    //   .subscribe(
-    //     (response: Documento[]) => {
-    //       this.documentos = response;
-    //       this.loading = false;
-    //     },
-    //     error => {
-    //       if (error.error.message === undefined) {
-    //         this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
-    //       }
-    //       else {
-    //         this.error = error.error.message;
-    //       }
-    //       console.log(this.error);
-    //       this.loading = false;
-    //     }
-    //   );
+    this._documentoService.getDocumentoBusquedaRapida(this.busquedaRapidaForm.value.palabraRapida)
+      .subscribe(
+        (response: Documento[]) => {
+          this.documentos = response;
+          this.loading = false;
+        },
+        error => {
+          if (error.error.message === undefined) {
+            this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
+          }
+          else {
+            this.error = error.error.message;
+          }
+          console.log(this.error);
+          this.loading = false;
+        }
+      );
   }
 
 }
