@@ -1,10 +1,10 @@
 export interface Documento{
-  arc_cod?:string,
+  arcCod?:string,
   hex?:string,
-  lib_cod?:string,
-  lib_nombre?:string,
-  arc_paginas?:number,
-  pag_nombre?:string,
-  pag_mini?:string,
+  libCod?:string,
+  libNombre?:string,
+  arcPaginas?:number,
+  pagNombre?:string,
+  pagMini?:string,
   metadata?:string
 }

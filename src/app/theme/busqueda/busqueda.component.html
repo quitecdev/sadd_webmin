@@ -1,54 +1,69 @@
 <div class="page-body">
-  <div class="row">
-    <div class="col-sm-12">
-      <!-- Search result 2 card start -->
-      <div class="card">
-        <div class="card-block">
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-              <p class="txt-highlight text-center m-t-20">
-                La potencia de la búsqueda por metadatos evita que la información se pierda en el sistema y maximiza su
-                valor poniéndola a disposición del usuario cuando lo necesita.
-              </p>
-            </div>
-          </div>
-          <div class="row seacrh-header">
-            <div class="col-lg-4 offset-lg-4 offset-sm-3 col-sm-6 offset-sm-1 col-xs-12">
-              <form class="form-material">
-                <div class="md-group-add-on form-group form-primary">
-                  <span class="md-add-on-file">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Search result 2 card start -->
+
+            <div class="card">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3">
+                            <p class="txt-highlight text-center m-t-20">
+                                La potencia de la búsqueda por metadatos evita que la información se pierda en el sistema y maximiza su valor poniéndola a disposición del usuario cuando lo necesita.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row seacrh-header">
+                        <div class="col-lg-4 offset-lg-4 offset-sm-3 col-sm-6 offset-sm-1 col-xs-12">
+                            <form class="form-material">
+                                <div class="md-group-add-on form-group form-primary">
+                                    <span class="md-add-on-file">
                     <button class="btn btn-primary waves-effect waves-light">Buscar</button>
                   </span>
-                  <div class="md-input-file">
-                    <input type="text" class="md-form-control md-form-file form-control" placeholder="Busca aquí...">
-                    <span class="form-bar"></span>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Search result 2 card end -->
-      <h4 class="m-b-20"><b>20</b> Search Results Found</h4>
-      <div class="row">
-        <!-- Search result found start -->
-        <div class="col-lg-12 col-xl-8 search2 search-result">
-          <div class="row">
 
-            <div class="col-xl-12 col-md-12">
-              <div class="card social-user o-hidden">
-                <div class="card-header">
-                  <h5>Libreria: Medica <span class="text-muted d-inline-block m-l-5">Páginas: 51</span></h5>
+                                    <div class="md-input-file">
+                                        <!-- <input type="text" class="md-form-control md-form-file form-control" placeholder="Busca aquí..."></input> -->
+                                        <span class="form-bar"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="row no-gutters">
-                  <div class="col-md-3">
-                    <img
-                      src="http://179.49.20.59/sadd/pagi/6E2B4C56314A592F315A416E477251656B3355667343694C532F673D/Pagina_1.jpg"
-                      class="img-fluid">
-                  </div>
-                  <div class="col-md-9">
-                    <!-- <div class="card-block">
+            </div>
+
+            <!-- Search result 2 card end -->
+
+            <h4 class="m-b-20">
+                <b>20</b> Search Results Found
+            </h4>
+
+            <div class="row">
+                <!-- Search result found start -->
+                <div class="col-lg-12 col-xl-8 search2 search-result">
+                    <div class="row">
+
+                        <code>
+                        {{documentos | json}}
+                      </code>
+
+                        <div class="col-xl-12 col-md-12" *ngFor="let documento of documentos">
+                            <div class="card social-user o-hidden">
+                                <div class="card-header">
+                                    <h5>
+                                        Libreria: {{documento.libNombre}}
+
+                                        <span class="text-muted d-inline-block m-l-5">Páginas: {{documento.arcPaginas}}</span>
+                                    </h5>
+                                </div>
+
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img [src]="documento.pagMini" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <!-- <div class="card-block">
                       <div class="row align-items-center">
                         <div class="col">
                           <dl class="dl-horizontal row">
@@ -82,48 +97,49 @@
                         </div>
                       </div>
                     </div> -->
-                  </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
-            </div>
 
+                <!-- Search result found end -->
+                <!-- <div class="col-lg-12 col-xl-4">
+                    <div class="card card-main">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Filter</h5>
+                        </div>
 
+                        <div class="card-block">
+                            <form class="form-material">
+                                <div class="form-group form-primary">
+                                    <input id="dropper-default" class="form-control" type="text" placeholder="Birth Date" required="" readonly="readonly"></input>
 
-          </div>
-        </div>
-        <!-- Search result found end -->
-        <div class="col-lg-12 col-xl-4">
-          <div class="card card-main">
-            <div class="card-header">
-              <h5 class="card-header-text">Filter</h5>
-            </div>
-            <div class="card-block">
-              <form class="form-material">
-                <div class="form-group form-primary">
-                  <input id="dropper-default" class="form-control" type="text" placeholder="Birth Date" required=""
-                    readonly="readonly">
-                  <span class="form-bar"></span>
-                </div>
-                <div class="right-icon-control">
+                                    <span class="form-bar"></span>
+                                </div>
 
-                  <div class="form-group form-primary">
-                    <input type="text" name="footer-email" class="form-control" required="">
-                    <span class="form-bar"></span>
-                    <label class="float-label">Search here...</label>
-                  </div>
+                                <div class="right-icon-control">
+                                    <div class="form-group form-primary">
+                                        <input type="text" name="footer-email" class="form-control" required=""></input>
 
-                  <div class="form-icon ">
-                    <button class="btn btn-success btn-icon  waves-effect waves-light">
+                                        <span class="form-bar"></span>
+
+                                        <label class="float-label">Search here...</label>
+                                    </div>
+
+                                    <div class="form-icon">
+                                        <button class="btn btn-success btn-icon  waves-effect waves-light">
                       <i class="fa fa-search"></i>
                     </button>
-                  </div>
-                </div>
-              </form>
-
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
