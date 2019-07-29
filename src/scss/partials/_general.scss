@@ -1,11 +1,11 @@
 /**  =====================
       Custom css start
 ==========================  **/
+
 // @font-face {
 //     font-family: segoe UI;
 //     src: url("../fonts/SEGOEUI.TTF");
 // }
-
 body {
     background-color: $theme-bg-color;
     font-size: $theme-font-size;
@@ -57,35 +57,49 @@ p {
     //     font-size: 14px;
     // }
 }
-b,strong{
+
+b,
+strong {
     font-weight: 500;
 }
+
 .media-left {
     padding-right: 20px;
 }
+
+
 /**====== Custom css end ======**/
+
+
 /**  =====================
       Main-body css start
 ==========================  **/
+
 .main-body {
     .page-wrapper {
         padding: 1.8rem;
         transition: all ease-in 0.3s;
     }
 }
+
+
 /**====== Main-body css end ======**/
+
+
 /**  =====================
       Card-Layout css start
 ==========================  **/
+
+
 /*====== Ecommerce Dashboard Css Start ======*/
+
 .author-details {
     border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
     padding: 10px 0;
     margin-bottom: 10px;
-
-    img ~ .dot1,
-    img ~ .dot2 {
+    img~.dot1,
+    img~.dot2 {
         height: 14px;
         width: 14px;
         border-radius: 100%;
@@ -93,45 +107,36 @@ b,strong{
         position: absolute;
         padding: 5px;
     }
-
-    img ~ .dot1 {
+    img~.dot1 {
         left: 40px;
     }
-
-    img ~ .dot2 {
+    img~.dot2 {
         left: 50px;
     }
-
     .recent-contain {
         h6 {
             font-size: 1rem;
             margin-bottom: 5px;
         }
     }
-
     .header-right {
         text-align: right;
         margin-top: 6px;
-
         ul {
             position: relative;
         }
-
         h4 {
             color: #919aa3;
             font-size: 0.875rem;
             margin-top: 5px;
         }
-
         span {
             font-size: 1rem;
         }
-
         li {
             display: inline-block;
             margin-right: 60px;
             text-align: left;
-
             &:last-child {
                 margin-right: 0;
                 position: absolute;
@@ -142,7 +147,10 @@ b,strong{
         }
     }
 }
+
+
 /*====== Ecommerce Dashboard Css End ======*/
+
 .login .container-fluid {
     width: auto;
     margin-top: 80px;
@@ -151,12 +159,17 @@ b,strong{
 .filter-bar .navbar .navbar-nav .dropdown-menu {
     position: absolute;
 }
+
+
 /*====== Ready to use Css Start ======*/
 
 .wrapper {
     padding: 0;
 }
+
+
 /*====== Ready to use Css End ======*/
+
 .card {
     border-radius: 5px;
     box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
@@ -165,24 +178,20 @@ b,strong{
     margin-bottom: 30px;
     // overflow: hidden;
     transition: all 0.3s ease-in-out;
-
     .card-footer {
         border-top: none;
         padding: 15px 20px;
         border-radius: 0 0 5px 5px;
     }
-
     .card-header {
         background-color: transparent;
         border-bottom: none;
         padding: 20px;
         position: relative;
         box-shadow: 0px 1px 20px 0px rgba(69, 90, 100, 0.08);
-
         .card-header-left {
             display: inline-block;
         }
-
         .card-header-right {
             right: 10px;
             top: 13px;
@@ -193,17 +202,14 @@ b,strong{
             @media only screen and (max-width: 575px) {
                 display: none;
             }
-
             i {
                 margin: 0 7px;
                 cursor: pointer;
                 font-size: 12px;
                 color: #8c8c8c;
                 line-height: 2;
-
                 &.icofont.icofont-spinner-alt-5 {
                     display: none;
-
                     &:before {
                         // content: "";
                         // background-image: url('../../assets/images/load.png');
@@ -214,18 +220,15 @@ b,strong{
                     }
                 }
             }
-
             .card-option {
                 width: 35px;
                 height: 20px;
                 overflow: hidden;
                 transition: 0.3s ease-in-out;
-
                 li {
                     display: inline-block;
                 }
             }
-
             &:hover {
                 // .card-option {
                 //     width: 145px;
@@ -238,18 +241,15 @@ b,strong{
                 // }
             }
         }
-
         span {
             display: block;
             font-size: 13px;
             margin-top: 5px;
         }
-
         // + .card-block,
         // + .card-block-big {
         //     padding-top: 0;
         // }
-
         h5 {
             margin-bottom: 0;
             color: $inverse-color;
@@ -270,97 +270,78 @@ b,strong{
             }
         }
     }
-
     .card-block {
         padding: 20px;
-
         table {
             tr {
                 padding-bottom: 20px;
             }
         }
-
         .sub-title {
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 1px;
         }
-
         code {
             background-color: #eee;
             margin: 5px;
             display: inline-block;
         }
-
         .dropdown-menu {
             top: 38px;
         }
-
         p {
             line-height: 1.4;
         }
-
         a {
             &.dropdown-item {
                 margin-bottom: 0;
                 font-size: 14px;
                 transition: 0.25s;
-
                 &:active,
                 .active {
                     background-color: $primary-color;
                 }
             }
         }
-
         &.remove-label i {
             margin: 0;
             padding: 0;
         }
-
         &.button-list span.badge {
             margin-left: 5px;
         }
-
         .dropdown-menu {
             background-color: #fff;
             padding: 0;
-
             .dropdown-divider {
                 background-color: #ddd;
                 margin: 3px 0;
             }
         }
-
-        .dropdown-menu > a {
+        .dropdown-menu>a {
             padding: 10px 16px;
             line-height: 1.429;
         }
-
-        .dropdown-menu > li > a:focus,
-        .dropdown-menu > li > a:hover {
+        .dropdown-menu>li>a:focus,
+        .dropdown-menu>li>a:hover {
             background-color: rgba(202, 206, 209, 0.5);
         }
-
-        .dropdown-menu > li:first-child > a:first-child {
+        .dropdown-menu>li:first-child>a:first-child {
             border-top-right-radius: 4px;
             border-top-left-radius: 4px;
         }
-
         .badge-box {
             padding: 10px;
             margin: 12px 0;
         }
     }
-
     .card-block-big {
         padding: 35px;
     }
-
     .card-block-small {
         padding: 15px;
     }
-
     // &:hover {
     //     box-shadow: 0 6px 10px -4px rgba(0,0,0,0.16);
     // }
@@ -368,9 +349,11 @@ b,strong{
     //     border: 1px solid #ddd;
     // }
 }
+
 .card-footer {
     background: transparent;
 }
+
 .pcoded {
     .card {
         &.full-card {
@@ -387,11 +370,9 @@ b,strong{
                 position: fixed;
             }
         }
-
         &.card-load {
             position: relative;
             overflow: hidden;
-
             .card-loader {
                 position: absolute;
                 top: 0;
@@ -400,9 +381,8 @@ b,strong{
                 height: 100%;
                 display: flex;
                 align-items: center;
-                background-color: rgba(256, 256, 256,0.7);
+                background-color: rgba(256, 256, 256, 0.7);
                 z-index: 999;
-
                 i {
                     margin: 0 auto;
                     color: #ab7967;
@@ -438,23 +418,23 @@ b,strong{
     animation: mymove 0.8s infinite linear;
     display: inline-block;
 }
+
 @-webkit-keyframes mymove {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
+
 @keyframes mymove {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -467,28 +447,23 @@ b,strong{
     position: relative;
     border-radius: 0;
     color: #fff;
-
     &:before {
         content: "";
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
     }
-
     .page-block {
         padding: 35px 40px;
-
         .breadcrumb-title {
             float: right;
-
             a {
                 font-size: 14px;
                 color: #fff;
             }
-
             .breadcrumb-item+.breadcrumb-item::before {
                 content: "\f105";
                 font-family: FontAwesome;
@@ -498,8 +473,8 @@ b,strong{
             }
         }
     }
-    @media only screen and (max-width: 768px){
-        .page-block .breadcrumb-title{
+    @media only screen and (max-width: 768px) {
+        .page-block .breadcrumb-title {
             float: left;
             margin-top: 10px;
         }
@@ -514,12 +489,16 @@ b,strong{
     font-weight: 400;
     color: #2c3e50;
 }
+
+
 /**======  Card-Layout css end ======**/
+
+
 /*======= Typography css start ========*/
+
 .blockquote {
     border-left: 0.25rem solid #eceeef;
     padding: 0.5rem 1rem;
-
     &.blockquote-reverse {
         text-align: right;
         padding-right: 1rem;
@@ -537,7 +516,6 @@ b,strong{
     h6 {
         margin: 0 0 20px;
     }
-
     small {
         margin-left: 10px;
         font-weight: 500;
@@ -551,7 +529,6 @@ b,strong{
         float: none;
         margin-bottom: 5px;
     }
-
     ol li {
         margin-bottom: 5px;
     }
@@ -559,7 +536,6 @@ b,strong{
 
 .inline-order-list {
     margin-top: 50px;
-
     h4,
     p {
         margin-bottom: 0;
@@ -570,7 +546,11 @@ b,strong{
     display: inline-block;
     float: left;
 }
+
+
 /*======= Typography css end ========*/
+
+
 /**  =====================
       Modal css start
 ==========================  **/
@@ -602,10 +582,15 @@ b,strong{
 .sweet-alert .sa-input-error {
     top: 23px;
 }
+
+
 /**====== Modal css end ======**/
+
+
 /**  =====================
       Notification css start
 ==========================  **/
+
 .location-selector {
     width: 100%;
     height: 250px;
@@ -613,31 +598,25 @@ b,strong{
     border: 2px dashed #e5e9ec;
     position: relative;
     margin-bottom: 20px;
-
     .bit {
         background-color: #e5e9ec;
         cursor: pointer;
         position: absolute;
-
         &:hover {
             background-color: #ddd;
         }
-
         &.bottom,
         &.top {
             height: 25%;
             width: 40%;
             margin: 0 30%;
         }
-
         &.top {
             top: 0;
         }
-
         &.bottom {
             bottom: 0;
         }
-
         &.left,
         &.right {
             height: 20%;
@@ -645,11 +624,9 @@ b,strong{
             margin-left: 0;
             margin-right: 0;
         }
-
         &.right {
             right: 0;
         }
-
         &.left {
             left: 0;
         }
@@ -660,15 +637,19 @@ button.close {
     margin-top: 7px;
     margin-bottom: 0;
 }
+
+
 /**====== Notification css end ======**/
+
+
 /**  =====================
       Tooltip css start
 ==========================  **/
+
 .mytooltip {
     display: inline;
     position: relative;
     z-index: 999;
-
     .tooltip-item {
         background: rgba(0, 0, 0, .1);
         cursor: pointer;
@@ -676,7 +657,6 @@ button.close {
         font-weight: 500;
         padding: 0 10px;
     }
-
     .tooltip-content {
         position: absolute;
         z-index: 9999;
@@ -692,7 +672,6 @@ button.close {
         opacity: 0;
         cursor: default;
         pointer-events: none;
-
         &::after {
             content: '';
             top: 100%;
@@ -706,7 +685,6 @@ button.close {
             border-width: 10px;
             margin-left: -10px;
         }
-
         img {
             position: relative;
             height: 140px;
@@ -715,7 +693,6 @@ button.close {
             margin-right: 1em;
         }
     }
-
     .tooltip-item::after {
         content: '';
         position: absolute;
@@ -727,35 +704,29 @@ button.close {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
-
     &:hover {
         .tooltip-item::after {
             pointer-events: auto;
         }
-
         .tooltip-content {
             pointer-events: auto;
             opacity: 1;
             transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
         }
-
         .tooltip-content2 {
             opacity: 1;
             font-size: 18px;
-
             i {
                 opacity: 1;
                 font-size: 18px;
             }
         }
-
         .tooltip-content2 {
             opacity: 1;
             font-size: 18px;
             pointer-events: auto;
             -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
             transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-
             i {
                 opacity: 1;
                 font-size: 18px;
@@ -764,48 +735,41 @@ button.close {
                 transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
             }
         }
-
         .tooltip-item2 {
             color: #fff;
             -webkit-transform: translate3d(0, -.9em, 0);
             transform: translate3d(0, -.9em, 0);
         }
-
         .tooltip-text3 {
             -webkit-transition-delay: 0s;
             transition-delay: 0s;
             -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
         }
-
         .tooltip-content3 {
             opacity: 1;
             pointer-events: auto;
             -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
         }
-
         .tooltip-content4 {
             pointer-events: auto;
             opacity: 1;
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
-
         .tooltip-text2 {
             pointer-events: auto;
             opacity: 1;
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
-
         .tooltip-inner2 {
             -webkit-transition-delay: 0.3s;
             transition-delay: 0.3s;
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
-
         .tooltip-content5 {
             opacity: 1;
             pointer-events: auto;
@@ -813,7 +777,6 @@ button.close {
             transition-delay: 0s;
         }
     }
-
     .tooltip-text {
         font-size: 14px;
         line-height: 24px;
@@ -821,7 +784,6 @@ button.close {
         padding: 1.31em 1.21em 1.21em 0;
         color: #fff;
     }
-
     .tooltip-item2 {
         color: $primary-color;
         cursor: pointer;
@@ -897,7 +859,6 @@ button.close {
     transform-origin: 50% 100%;
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
-
     i {
         -webkit-transform: scale3d(0, 0, 1);
         transform: scale3d(0, 0, 1);
@@ -911,7 +872,6 @@ button.close {
     transform: translate3d(0, 10px, 0);
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
-
     i {
         -webkit-transform: translate3d(0, 15px, 0);
         transform: translate3d(0, 15px, 0);
@@ -927,7 +887,6 @@ button.close {
     transform-origin: 50% 100%;
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
-
     i {
         -webkit-transform: scale3d(0, 0, 1);
         transform: scale3d(0, 0, 1);
@@ -941,7 +900,6 @@ button.close {
     transform: translate3d(0, -20px, 0);
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
-
     i {
         -webkit-transform: translate3d(0, 20px, 0);
         transform: translate3d(0, 20px, 0);
@@ -971,11 +929,9 @@ button.close {
     margin-bottom: 20px;
     cursor: default;
     pointer-events: none;
-
     i {
         opacity: 0;
     }
-
     &::after {
         content: '';
         position: absolute;
@@ -1014,7 +970,6 @@ button.close {
     transition: opacity 0.4s, transform 0.4s;
     -webkit-transition-timing-function: ease, cubic-bezier(.6, 0, .4, 1);
     transition-timing-function: ease, cubic-bezier(.6, 0, .4, 1);
-
     &::after {
         content: '';
         position: absolute;
@@ -1043,7 +998,7 @@ button.close {
     line-height: 27px;
     padding: 1.5em;
     color: #fff;
-    border-bottom: 55px solid darken($primary-color,20%);
+    border-bottom: 55px solid darken($primary-color, 20%);
     cursor: default;
     pointer-events: none;
     border-radius: 5px;
@@ -1051,11 +1006,9 @@ button.close {
     transform: translate3d(0, -.5em, 0);
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
-
     a {
         color: #2b2b2b;
     }
-
     .tooltip-text2 {
         opacity: 0;
         -webkit-transform: translate3d(0, 1.5em, 0);
@@ -1084,11 +1037,9 @@ button.close {
     -webkit-font-smoothing: antialiased;
     -webkit-transition: opacity 0.3s 0.3s;
     transition: opacity 0.3s 0.3s;
-
     span {
         display: block;
     }
-
     &::after {
         content: '';
         bottom: -20px;
@@ -1102,7 +1053,6 @@ button.close {
         border-width: 10px;
         margin-left: -10px;
     }
-
     .tooltip-text3 {
         border-bottom: 10px solid $primary-color;
         overflow: hidden;
@@ -1111,7 +1061,6 @@ button.close {
         -webkit-transition: -webkit-transform 0.3s 0.3s;
         transition: transform 0.3s 0.3s;
     }
-
     .tooltip-inner2 {
         background: #2b2b2b;
         padding: 40px;
@@ -1136,11 +1085,18 @@ a.mytooltip {
 .tooltip-icon button i {
     margin-right: 0;
 }
+
+
 /**====== Tooltip css end ======**/
+
+
 /**  =====================
       Slider css start
 ==========================  **/
+
+
 /*========= Owl-carousel css start ============*/
+
 .owl-theme .owl-nav [class*='owl-']:hover {
     background: $primary-color;
 }
@@ -1151,41 +1107,54 @@ a.mytooltip {
         background: $primary-color;
     }
 }
+
+
 /*========= Owl-carousel css end ============*/
+
+
 /**  =====================
       Animation css start
 ==========================  **/
+
 .animation-image img {
     margin: 10px auto 20px;
     cursor: pointer;
 }
+
+
 /**====== Animation css end ======**/
+
+
 /**  =====================
       Tree-view css start
 ==========================  **/
+
 .card-block.tree-view ul {
     display: inherit;
-
     li {
         display: inherit;
         float: none;
     }
 }
 
-.jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
+.jstree-default>.jstree-container-ul .jstree-loading>.jstree-ocl {
     background: url("../assets/images/treeview/throbber.gif") center center no-repeat;
 }
+
+
 /**====== Tree-view css end ======**/
+
+
 /**  =====================
       File Upload css start
 ==========================  **/
+
 .jFiler-theme-default {
     .jFiler-input-button {
         background-color: $primary-color;
         background-image: none;
         color: #fff;
     }
-
     .jFiler-input {
         width: 100%;
     }
@@ -1215,7 +1184,6 @@ a.mytooltip {
     padding: 10px 25px;
     background: $primary-color;
     color: #fff !important;
-
     &:hover {
         background: #fff;
         border: 1px solid $primary-color;
@@ -1226,10 +1194,15 @@ a.mytooltip {
 .card .jFiler-item-assets ul li {
     margin-right: 0;
 }
+
+
 /**====== File Upload css end ======**/
+
+
 /**  =====================
       Cropper css start
 ==========================  **/
+
 .img-container,
 .img-preview {
     background-color: #f7f7f7;
@@ -1242,13 +1215,14 @@ a.mytooltip {
     max-height: 516px;
     margin-bottom: 20px;
 }
+
 @media (min-width: 768px) {
     .img-container {
         min-height: 516px;
     }
 }
 
-.img-container > img {
+.img-container>img {
     max-width: 100%;
 }
 
@@ -1261,8 +1235,7 @@ a.mytooltip {
     margin-right: 10px;
     margin-bottom: 10px;
     overflow: hidden;
-
-    > img {
+    >img {
         max-width: 100%;
     }
 }
@@ -1287,30 +1260,28 @@ a.mytooltip {
     margin-right: 0;
 }
 
-.docs-data > .input-group {
+.docs-data>.input-group {
     margin-bottom: 10px;
-
-    > label {
+    >label {
         min-width: 80px;
     }
-
-    > span {
+    >span {
         min-width: 50px;
     }
 }
 
 .docs-buttons {
-    > .btn,
-     > .form-control,
-    > .btn-group {
+    >.btn,
+    >.form-control,
+    >.btn-group {
         margin-right: 5px;
     }
 }
 
 .docs-toggles {
-    > .btn,
-     > .dropdown,
-    > .btn-group {
+    >.btn,
+    >.dropdown,
+    >.btn-group {
         margin-bottom: 10px;
     }
 }
@@ -1319,8 +1290,7 @@ a.mytooltip {
     display: block;
     margin: -6px -12px;
     padding: 6px 12px;
-
-    > .icon {
+    >.icon {
         margin: 0 -3px;
         vertical-align: top;
     }
@@ -1333,15 +1303,14 @@ a.mytooltip {
 .btn-upload .tooltip-inner {
     white-space: nowrap;
 }
+
 @media (max-width: 400px) {
     .btn-group-crop {
         margin-right: -15px !important;
-
-        > .btn {
+        >.btn {
             padding-left: 5px;
             padding-right: 5px;
         }
-
         .docs-tooltip {
             margin-left: -5px;
             margin-right: -5px;
@@ -1353,16 +1322,13 @@ a.mytooltip {
 
 .docs-options .dropdown-menu {
     width: 100%;
-
-    > li {
+    >li {
         padding: 3px 20px;
         font-size: 14px;
-
         &:hover {
             background-color: #f7f7f7;
         }
-
-        > label {
+        >label {
             display: block;
         }
     }
@@ -1370,9 +1336,8 @@ a.mytooltip {
 
 .docs-cropped .modal-body {
     text-align: center;
-
-    > img,
-    > canvas {
+    >img,
+    >canvas {
         max-width: 100%;
     }
 }
@@ -1384,10 +1349,15 @@ a.mytooltip {
 label.btn-upload {
     height: 40px;
 }
+
+
 /**====== Cropper css end ======**/
+
+
 /**  =====================
       Accordion css start
 ==========================  **/
+
 .accordion-msg {
     display: block;
     color: #222222;
@@ -1427,7 +1397,6 @@ label.btn-upload {
 
 .accordion-block {
     padding: 0;
-
     p {
         margin-bottom: 0;
     }
@@ -1477,10 +1446,15 @@ a.bg-danger:hover {
     background-color: lighten($danger-color, 10%) !important;
     color: #fff;
 }
+
+
 /**====== Accordion css end ======**/
+
+
 /**  =====================
       Tabs css start
 ==========================  **/
+
 .tab-list p {
     padding: 10px;
 }
@@ -1492,7 +1466,6 @@ a.bg-danger:hover {
 
 .tab-icon {
     margin-bottom: 30px;
-
     i {
         padding-right: 10px;
     }
@@ -1501,15 +1474,12 @@ a.bg-danger:hover {
 .tab-below {
     border-top: 1px solid #ddd;
     border-bottom: none;
-
     &.nav-tabs .nav-link.active {
         border-color: transparent #ddd #ddd #ddd;
     }
-
     .nav-item {
         margin-top: -2px;
     }
-
     &.nav-tabs .nav-link {
         border-bottom-right-radius: 0.25rem;
         border-bottom-left-radius: 0.25rem;
@@ -1559,7 +1529,6 @@ a.bg-danger:hover {
             a {
                 padding: 0 0 10px !important;
                 color: $inverse-color;
-
                 .f-20 {
                     display: inline-block;
                     margin-right: 10px;
@@ -1579,37 +1548,30 @@ a.bg-danger:hover {
 
 .md-tabs {
     position: relative;
-
     .nav-item+.nav-item {
         margin: 0;
     }
-
     .nav-link {
         border: none;
         color: $inverse-color;
     }
-
     .nav-item {
         flex: 1;
         text-align: center;
         position: relative;
     }
-
     .nav-link:focus,
     .nav-link:hover {
         border: none;
     }
-
     .nav-item .nav-link.active~.slide {
         opacity: 1;
         transition: all 0.3s ease-out;
     }
-
     .nav-item .nav-link~.slide {
         opacity: 0;
         transition: all 0.3s ease-out;
     }
-
     .nav-item.open .nav-link,
     .nav-item.open .nav-link:focus,
     .nav-item.open .nav-link:hover,
@@ -1621,7 +1583,6 @@ a.bg-danger:hover {
         background-color: transparent;
         border-radius: 0;
     }
-
     .nav-item a {
         padding: 20px 0 !important;
         color: $inverse-color;
@@ -1635,7 +1596,6 @@ a.bg-danger:hover {
     position: absolute;
     transition: left 0.3s ease-out;
     bottom: 0;
-
     .nav-item.show .nav-link,
     .nav-link {
         color: $primary-color;
@@ -1647,11 +1607,9 @@ a.bg-danger:hover {
         width: 100px;
         margin: 0 auto;
     }
-
     a {
         opacity: 0.5;
         transition: all ease-in-out 0.3s;
-
         span i {
             height: 25px;
             width: 25px;
@@ -1659,17 +1617,14 @@ a.bg-danger:hover {
             bottom: 10px;
             right: 70px;
         }
-
         img {
             border: 3px solid;
         }
-
         &.active {
             opacity: 1;
             transition: all ease-in-out 0.3s;
         }
     }
-
     .nav-item:first-child {
         border-bottom: none;
     }
@@ -1691,13 +1646,18 @@ a.bg-danger:hover {
 .b-none {
     border: none !important;
 }
+
+
 /**====== Tabs css end ======**/
+
+
 /**  =====================
       Table css start
 ==========================  **/
+
 .table-primary,
-.table-primary > td,
-.table-primary > th {
+.table-primary>td,
+.table-primary>th {
     background-color: #4680FE;
 }
 
@@ -1743,31 +1703,28 @@ a.bg-danger:hover {
 }
 
 .table-columned {
-    > tbody > tr {
-        > td:first-child,
-        > th:first-child {
+    >tbody>tr {
+        >td:first-child,
+        >th:first-child {
             border-left: 0;
         }
     }
-
-    > tfoot > tr {
-        > td:first-child,
-        > th:first-child {
+    >tfoot>tr {
+        >td:first-child,
+        >th:first-child {
             border-left: 0;
         }
     }
-
-    > tbody > tr {
-        > td,
-        > th {
+    >tbody>tr {
+        >td,
+        >th {
             border: 0;
             border-left: 1px solid #ddd;
         }
     }
-
-    > tfoot > tr {
-        > td,
-        > th {
+    >tfoot>tr {
+        >td,
+        >th {
             border: 0;
             border-left: 1px solid #ddd;
         }
@@ -1776,13 +1733,12 @@ a.bg-danger:hover {
 
 .table-border-style {
     padding: 0;
-
     .table {
         margin-bottom: 0;
     }
 }
 
-.table > thead > tr > th {
+.table>thead>tr>th {
     border-bottom-color: #ccc;
 }
 
@@ -1793,39 +1749,42 @@ a.bg-danger:hover {
     }
 }
 
-.table-bordered > thead > tr.border-solid {
-    > td,
-    > th {
+.table-bordered>thead>tr.border-solid {
+    >td,
+    >th {
         border-bottom-width: 2px;
     }
-
     &:first-child {
-        > td,
+        >td,
         th {
             border-bottom-width: 2px;
         }
     }
 }
 
-.table-bordered > thead > tr.border-double {
-    > td,
-    > th {
+.table-bordered>thead>tr.border-double {
+    >td,
+    >th {
         border-bottom-width: 3px;
         border-bottom-style: double;
     }
-
     &:first-child {
-        > td,
+        >td,
         th {
             border-bottom-width: 3px;
             border-bottom-style: double;
         }
     }
 }
+
+
 /**====== Table css end ======**/
+
+
 /**  =====================
       User-Profile css start
 ==========================  **/
+
 .rounded-card img,
 .user-img img {
     margin: 0 auto;
@@ -1841,16 +1800,13 @@ a.bg-danger:hover {
     border-top: 1px solid rgba(204, 204, 204, 0.28);
     padding: 10px 0 10px 10px;
     text-align: left;
-
     a {
         font-size: 16px;
         color: #666;
     }
-
     &.active a {
         color: #fff;
     }
-
     &.active {
         font-weight: 500;
         background: #1b8bf9;
@@ -1880,23 +1836,18 @@ h5 {
     i {
         color: #fff;
     }
-
     .fb-btn {
         background-color: #3b5998;
     }
-
     .twitter-btn {
         background-color: #55acee;
     }
-
     .pinterest-btn {
         background-color: #cb2027;
     }
-
     .linkedin-btn {
         background-color: #007bb5;
     }
-
     .dribbble-btn {
         background-color: #ea4c89;
     }
@@ -1987,7 +1938,6 @@ h6.media-heading {
 .user-title {
     position: relative;
     bottom: 20px;
-
     h2 {
         color: #fff;
         text-shadow: 1px 1px 4px #373a3c;
@@ -2019,7 +1969,6 @@ h6.media-heading {
 
 .groups-contact span {
     float: right;
-
     h4 {
         font-size: 18px;
         margin-bottom: 20px;
@@ -2030,7 +1979,6 @@ h6.media-heading {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
     top: 15%;
     right: 10%;
-
     .dropdown-item {
         padding: 8px 20px;
     }
@@ -2039,15 +1987,19 @@ h6.media-heading {
 .tab-header {
     margin-bottom: 20px;
 }
+
+
 /*====== User-Profile End ======*/
+
+
 /**  =====================
       User-card css start
 ==========================  **/
+
 .card.user-card {
     border-top: none;
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
     transition: all 150ms linear;
-
     &:hover {
         box-shadow: 0 0 25px -5px #9e9c9e;
     }
@@ -2062,7 +2014,6 @@ h6.media-heading {
     border-left-width: 2px !important;
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
     transition: all 150ms linear;
-
     &:hover {
         box-shadow: 0 0 25px -5px #9e9c9e;
     }
@@ -2078,12 +2029,10 @@ h6.media-heading {
 .user-content {
     text-align: center;
     margin-top: 20px;
-
     h4 {
         font-size: 16px;
         font-weight: 500;
     }
-
     h5 {
         font-size: 14px;
     }
@@ -2100,7 +2049,6 @@ h6.media-heading {
     position: absolute;
     transform: scale(0);
     margin: 0 auto;
-
     span {
         position: absolute;
         top: 50%;
@@ -2108,10 +2056,8 @@ h6.media-heading {
         width: 100px;
         text-align: center;
         transform: translate(-50%, -50%);
-
         .btn {
             display: inline-block;
-
             i {
                 margin-right: 0;
             }
@@ -2126,7 +2072,6 @@ h6.media-heading {
 .img-hover {
     position: relative;
     margin: 0 auto;
-
     &:hover .img-overlay {
         left: 0;
         right: 0;
@@ -2147,14 +2092,12 @@ h6.media-heading {
         margin: 0 auto;
         display: block;
     }
-
     h4 {
         margin-top: 30px;
         font-size: 20px;
         font-weight: 500;
         text-align: center;
     }
-
     h5,
     h6 {
         margin-top: 15px;
@@ -2168,23 +2111,18 @@ h6.media-heading {
 .simple-cards {
     .btn-group {
         margin: 20px auto 0;
-
         button {
             margin: 0;
         }
     }
-
     .user-card {
         padding: 20px 0;
         text-align: center;
-
         .label-icon {
             margin-top: 15px;
-
             i {
                 font-size: 20px;
             }
-
             .badge-top-right {
                 margin-left: 3px;
                 top: -8px;
@@ -2203,7 +2141,6 @@ h6.media-heading {
     font-weight: 500;
     padding: 10px 16px;
     font-size: 15px;
-
     &:hover {
         background-color: $primary-color;
         border-color: $primary-color;
@@ -2226,7 +2163,6 @@ h6.media-heading {
 .card-block.groups-contact ul {
     display: block;
     float: none;
-
     li {
         display: block;
         float: none;
@@ -2237,7 +2173,6 @@ ul.list-contacts .list-group-item {
     a {
         color: #292b2c;
     }
-
     &.active a {
         color: #fff;
     }
@@ -2253,11 +2188,9 @@ ul.list-contacts .list-group-item {
     &.groups-contact {
         margin-bottom: 0;
     }
-
     .connection-list {
         margin-bottom: 20px;
     }
-
     .pagination li {
         // margin-right: 0 !important;
     }
@@ -2285,28 +2218,36 @@ img.comment-img {
 #main {
     margin-bottom: 20px;
 }
+
+
 /*====== User-card End ======*/
+
+
 /**  =====================
       Offline css start
 ==========================  **/
+
 .offline-box {
     iframe {
         width: 100%;
         border: 1px solid #ddd;
     }
 }
+
+
 /*==== Offline page css end ====*/
+
+
 /**  =====================
       Blog css start
 ==========================  **/
+
 .blog-page {
     border-top: none;
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
-
     .blog-box {
         box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
         overflow: hidden;
-
         h5 {
             border-bottom: 1px solid #ccc;
             color: $primary-color;
@@ -2316,7 +2257,6 @@ img.comment-img {
             font-size: 18px;
             display: block;
         }
-
         .option-font {
             background-color: $primary-color;
             border-radius: 50%;
@@ -2328,28 +2268,23 @@ img.comment-img {
             text-align: center;
             width: 35px;
         }
-
         .blog-detail {
             padding: 10px;
         }
     }
-
     .blog-img {
         transition: all 0.3s ease-in-out;
         overflow: hidden;
         margin-bottom: -20px;
-
         &:hover {
             opacity: 0.8;
             transition: all 0.3s ease-in-out;
         }
-
         .sharing {
             position: relative;
             bottom: 50px;
             left: 15px;
         }
-
         .share {
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
@@ -2361,7 +2296,6 @@ img.comment-img {
             padding: 3px 5px;
             position: absolute;
         }
-
         .share::before {
             border-bottom: 6px solid transparent;
             border-left: 6px solid transparent;
@@ -2375,17 +2309,14 @@ img.comment-img {
             transform: rotate(-135deg);
             width: 12px;
         }
-
         .share i {
             color: #fff;
             font-size: 15px;
             border-right: 1px solid #fff;
             padding: 0 5px;
-
             &:last-child {
                 border: none;
             }
-
             a {
                 padding: 0 5px;
                 color: #fff;
@@ -2397,7 +2328,6 @@ img.comment-img {
 .author {
     display: inline-block;
     float: right;
-
     a {
         font-size: 13px;
     }
@@ -2411,13 +2341,11 @@ img.comment-img {
     font-size: 18px;
     padding-bottom: 10px;
     display: block;
-
     i {
         margin-left: 5px;
         font-size: 14px;
         color: $primary-color;
     }
-
     .icon-calendar {
         font-size: 16px;
         margin-top: 5px;
@@ -2440,15 +2368,12 @@ img.comment-img {
         color: $primary-color;
         font-weight: 400;
     }
-
     p {
         margin: 20px 0;
-
         &:last-child {
             color: #777;
         }
     }
-
     .qutoe-text {
         font-size: 15px;
         color: $primary-color;
@@ -2456,7 +2381,6 @@ img.comment-img {
         padding-left: 25px;
         font-weight: 400;
     }
-
     img:first-child {
         width: 100%;
     }
@@ -2495,26 +2419,21 @@ img.comment-img {
     padding: 5px 15px;
     border: 1px solid #ccc;
     margin: 5px 15px 5px 0;
-
     a,
     i {
         color: #777;
     }
-
     &:first-child {
         border: none;
         padding: 5px 0;
     }
-
     i {
         font-size: 20px;
         vertical-align: middle;
     }
-
     &:hover {
         background-color: $primary-color;
         border-color: $primary-color;
-
         a,
         i {
             color: #fff;
@@ -2527,16 +2446,13 @@ img.comment-img {
         display: inline-block;
         margin: 5px 15px 5px 0;
         font-size: 20px;
-
         &:first-child {
             font-size: 17px;
         }
-
         i {
             color: #fff;
         }
     }
-
     .btn-facebook,
     .btn-google-plus,
     .btn-linkedin,
@@ -2574,7 +2490,6 @@ img.comment-img {
         padding-top: 20px;
         font-weight: 400;
     }
-
     a {
         font-weight: 400;
         font-size: 15px;
@@ -2594,7 +2509,6 @@ img.comment-img {
     span {
         font-size: 14px;
     }
-
     .blog-edit,
     .blog-reply {
         a {
@@ -2607,7 +2521,6 @@ img.comment-img {
 .system_font_color {
     font-size: 18px;
     color: $primary-color;
-
     a {
         color: $primary-color;
         margin-left: 5px;
@@ -2622,11 +2535,9 @@ img.comment-img {
         display: block;
         font-weight: lighter;
     }
-
     a {
         color: #333;
         transition: all 0.3s 0s;
-
         i {
             float: right;
             margin-top: 6px;
@@ -2644,7 +2555,6 @@ img.comment-img {
     transition: all 0.5s ease;
     display: inline-block;
     margin-bottom: 10px;
-
     &:hover {
         background-color: $primary-color;
         color: #fff;
@@ -2655,17 +2565,21 @@ img.comment-img {
     color: #333;
     font-weight: 500;
 }
+
+
 /*====== Blog css ends =======*/
+
+
 /**  =====================
       Gallery css start
 ==========================  **/
+
 .gallery-page .card-block {
     margin-bottom: -20px;
 }
 
 .thumbnail {
     margin-bottom: 20px;
-
     .thumb {
         position: relative;
         display: block;
@@ -2678,10 +2592,8 @@ img.comment-img {
 
 .masonry-media {
     overflow: hidden;
-
     img {
         transition: all 0.3s ease-in-out;
-
         &:hover {
             transform: scale(1.1);
         }
@@ -2695,10 +2607,15 @@ img.comment-img {
 figure.effect-goliath {
     background: $primary-color;
 }
+
+
 /**====== Gallery css end ======**/
+
+
 /**  =====================
       List-chart css start
 ==========================  **/
+
 .barchart canvas,
 .tristate canvas {
     width: 100% !important;
@@ -2744,20 +2661,23 @@ figure.effect-goliath {
 .ct-series-d .ct-slice-donut {
     stroke: #4F5467;
 }
+
+
 /*===== List-chart Css End ====*/
+
+
 /**  =====================
       Task-list css start
 ==========================  **/
+
 .task-list {
     select {
         width: 92%;
-
         .task-list img {
             margin-right: 5px;
             display: inline-block;
         }
     }
-
     input {
         width: 80%;
     }
@@ -2765,7 +2685,6 @@ figure.effect-goliath {
 
 .task-list-table img {
     width: 40px;
-
     i {
         color: #333;
         margin-right: 5px;
@@ -2776,23 +2695,25 @@ figure.effect-goliath {
     td:last-child {
         position: relative;
     }
-
     a {
         cursor: pointer;
     }
-
     tr td:last-child i {
         margin-right: 10px;
     }
 }
+
+
 /*===== Task-list css end ====*/
+
+
 /**  =====================
       Task-detiails css start
 ==========================  **/
+
 .thumb-img {
     position: relative;
     display: block;
-
     &:hover .caption-hover {
         background-color: rgba(0, 0, 0, .7);
         visibility: visible;
@@ -2812,8 +2733,7 @@ figure.effect-goliath {
     -webkit-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-
-    > span {
+    >span {
         top: 38%;
         width: 100%;
         position: absolute;
@@ -2834,11 +2754,9 @@ figure.effect-goliath {
     -webkit-transition: border 0.2s ease-in-out;
     -o-transition: border 0.2s ease-in-out;
     transition: border 0.2s ease-in-out;
-
     a {
         font-size: 12px;
     }
-
     .btn i {
         margin-right: 0;
     }
@@ -2872,7 +2790,6 @@ figure.effect-goliath {
 
 .assign-user .media-left {
     position: relative;
-
     img {
         margin-bottom: 0;
     }
@@ -2901,7 +2818,6 @@ figure.effect-goliath {
         display: block !important;
         float: right;
     }
-
     .form-group {
         margin-bottom: 0;
     }
@@ -2910,16 +2826,21 @@ figure.effect-goliath {
 .task-attachment i {
     cursor: pointer;
 }
+
+
 /**====== Task-details css end ======**/
+
+
 /**  =====================
       Task-board css start
 ==========================  **/
+
 .filter-bar .nav,
 .filter-bar .nav-item {
     display: inline-block;
 }
 
-.filter-bar > .navbar {
+.filter-bar>.navbar {
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 3px 1px -2px rgba(0, 0, 0, .08), 0 1px 5px 0 rgba(0, 0, 0, .08);
@@ -2957,7 +2878,6 @@ p {
     &.task-detail {
         margin-bottom: 5px;
     }
-
     &.task-due {
         margin-bottom: 0;
     }
@@ -3066,10 +2986,15 @@ p {
 .faq-progress .progress {
     margin-bottom: 10px;
 }
+
+
 /**====== Tsak-board css end ======**/
+
+
 /**  =====================
       Issue-list css start
 ==========================  **/
+
 .issue-list-progress {
     border-bottom: 1px solid #ccc;
 }
@@ -3120,14 +3045,18 @@ table.matrics-table tr:first-child td {
     border-top: none !important;
 }
 
-#issue-list-table > thead > tr > th {
+#issue-list-table>thead>tr>th {
     border-bottom: none;
 }
 
 .note-card .notes-list {
     margin-bottom: 20px;
 }
+
+
 /**====== Issue-list css end ======**/
+
+
 /**  =====================
       Product css start
 ==========================  **/
@@ -3135,7 +3064,6 @@ table.matrics-table tr:first-child td {
 .prod-img {
     position: relative;
     overflow: hidden;
-
     .btn i {
         margin-right: 0;
     }
@@ -3147,7 +3075,6 @@ table.matrics-table tr:first-child td {
     right: 0;
     top: 50%;
     left: 0;
-
     .btn-icon {
         border-radius: 5px;
     }
@@ -3157,7 +3084,6 @@ table.matrics-table tr:first-child td {
     display: inline-block;
     vertical-align: middle;
     transition: all 0.3s ease-in-out;
-
     &:hover {
         transform: scale(1.1);
     }
@@ -3182,24 +3108,20 @@ table.matrics-table tr:first-child td {
     .br-wrapper {
         margin: 0 auto 20px;
     }
-
     .br-widget {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 0;
     }
-
     h4 {
         font-size: 18px;
         margin-bottom: 10px;
     }
-
     .prod-price {
         font-size: 22px;
         font-weight: 500;
         margin-bottom: 10px;
-
         .old-price {
             color: #919aa3;
             text-decoration: line-through;
@@ -3253,10 +3175,15 @@ table.matrics-table tr:first-child td {
     font-size: 25px;
     line-height: 36px;
 }
+
+
 /**====== Product css end ======**/
+
+
 /**  =====================
       Product-details css start
 ==========================  **/
+
 .product-detail-page {
     border-top: none;
 }
@@ -3265,39 +3192,32 @@ table.matrics-table tr:first-child td {
     .br-wrapper {
         margin: 10px 0;
     }
-
     .product-detail .btn i {
         margin-right: 0;
     }
-
     .br-widget {
         min-height: 35px;
         margin-top: 0;
         display: block;
     }
-
     .btn-number {
         background-color: #e0e0e0;
         border-color: #d4d4d4;
         border-radius: 0;
         color: #000;
     }
-
     .product-price {
         display: inline-block;
         margin-right: 50px;
         font-size: 24px;
     }
-
     .pro-desc {
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
     .done-task {
         text-decoration: line-through;
     }
-
     hr {
         margin-top: 15px;
         margin-bottom: 15px;
@@ -3310,21 +3230,17 @@ table.matrics-table tr:first-child td {
         filter: grayscale(100%);
         opacity: 0.5;
     }
-
     img {
         cursor: pointer;
     }
-
     .slick-center {
         filter: grayscale(0);
         opacity: 1;
     }
-
     &:hover .slick-prev {
         left: 0;
         transition: all ease-in 0.3s;
     }
-
     &:hover .slick-next {
         right: 0;
         transition: all ease-in 0.3s;
@@ -3346,7 +3262,6 @@ table.matrics-table tr:first-child td {
     background: rgba(0, 0, 0, 0.62);
     width: 4%;
     transition: all ease-in 0.3s;
-
     &:focus,
     &:hover {
         color: transparent;
@@ -3367,7 +3282,6 @@ table.matrics-table tr:first-child td {
     background: rgba(0, 0, 0, 0.62);
     width: 4%;
     transition: all ease-in 0.3s;
-
     &:focus,
     &:hover {
         color: transparent;
@@ -3397,13 +3311,18 @@ table.matrics-table tr:first-child td {
     margin: 10px 0 30px;
 }
 
-.addcontact .md-content > div ul {
+.addcontact .md-content>div ul {
     padding-left: 0;
 }
+
+
 /**====== Product-details css end ======**/
+
+
 /* ======================
     Panels and wells css start
 ========================= */
+
 .panel {
     background-color: #fff;
     border: 1px solid transparent;
@@ -3421,7 +3340,6 @@ table.matrics-table tr:first-child td {
     .panel {
         margin-bottom: 20px;
     }
-
     .panel .panel-body {
         padding: 15px;
     }
@@ -3461,20 +3379,23 @@ table.matrics-table tr:first-child td {
     padding: 24px;
     border-radius: 6px;
 }
+
+
 /**====== Panels and wells css end ======**/
+
+
 /**  =====================
       Search css start
 ==========================  **/
+
 .search-result {
     .card {
         border-top: none;
         box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
-
         .card-block {
             h5 {
                 font-weight: 500;
             }
-
             p {
                 margin-bottom: 0;
                 margin-top: 10px;
@@ -3494,11 +3415,9 @@ table.matrics-table tr:first-child td {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
-
     img {
         width: 120px;
     }
-
     &:last-child {
         border-bottom: none;
         margin-bottom: 0;
@@ -3506,27 +3425,31 @@ table.matrics-table tr:first-child td {
     }
 }
 
-.search-result i {
-    float: right;
-}
-
+// .search-result i {
+//     float: right;
+// }
 .search2 .card-block:first-child {
     padding-top: 0;
 }
+
+
 /**====== Search css end ======**/
+
+
 /**  =====================
       Wizard css start
 ==========================  **/
-.cart-page .wizard > .content > .body {
+
+.cart-page .wizard>.content>.body {
     width: 100%;
     padding: 0;
 }
 
-.wizard > .content > .body {
+.wizard>.content>.body {
     width: 100%;
 }
 
-.card .wizard > .steps .current a {
+.card .wizard>.steps .current a {
     outline: none;
     border-radius: 5px;
 }
@@ -3536,7 +3459,6 @@ table.matrics-table tr:first-child td {
     border-radius: 0;
     margin-bottom: 15px;
     padding: 20px;
-
     table {
         margin-bottom: 0;
     }
@@ -3567,8 +3489,13 @@ table.matrics-table tr:first-child td {
     max-width: 15px;
     padding: 5px 0 0;
 }
+
+
 /**====== Wizard css end ======**/
+
+
 /**====== Timeline css start ======**/
+
 .post-timelines .media {
     align-items: center;
 }
@@ -3578,13 +3505,17 @@ a[data-lightbox="roadtrip"] .img-fluid,
 a[data-toggle="lightbox"] .img-fluid {
     margin: 10px 0;
 }
+
+
 /**====== Timeline css end ======**/
+
+
 /**  =====================
       Wall css start
 ==========================  **/
+
 .post-new-footer {
     border-top: 1px solid #ccc;
-
     i {
         font-size: 18px;
         margin-right: 15px;
@@ -3596,7 +3527,6 @@ a[data-toggle="lightbox"] .img-fluid {
     .btn {
         padding: 10px;
     }
-
     .input-group .form-control {
         width: 100%;
     }
@@ -3606,7 +3536,6 @@ a[data-toggle="lightbox"] .img-fluid {
     span {
         cursor: pointer;
     }
-
     a {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -3616,7 +3545,6 @@ a[data-toggle="lightbox"] .img-fluid {
 
 .msg-send {
     background-color: #f3f3f3;
-
     &:focus {
         background-color: #f3f3f3;
     }
@@ -3632,7 +3560,6 @@ a[data-toggle="lightbox"] .img-fluid {
 .wall-img-preview {
     display: inline-block;
     text-align: center;
-
     .wall-item {
         display: block;
         float: left;
@@ -3646,14 +3573,13 @@ a[data-toggle="lightbox"] .img-fluid {
         background-size: cover;
         background-position: center;
     }
-
     .wall-item:first-child:nth-last-child(2),
     .wall-item:first-child:nth-last-child(2)~div {
         width: 50%;
     }
 }
 
-.wall-img-preview .wall-item > img {
+.wall-img-preview .wall-item>img {
     display: none;
 }
 
@@ -3711,14 +3637,11 @@ a[data-toggle="lightbox"] .img-fluid {
         -webkit-border-radius: 4px;
         font-weight: 300;
     }
-
     ul {
         margin-left: 15px;
         margin-bottom: 20px;
-
         li {
             margin-bottom: 3px;
-
             a {
                 color: #999797;
                 border-left: 4px solid #d3d7dd;
@@ -3726,14 +3649,12 @@ a[data-toggle="lightbox"] .img-fluid {
                 padding-top: 3px;
                 padding-bottom: 3px;
                 display: block;
-
                 &:hover {
                     color: #999797;
                     border-left: 4px solid #b1b1b1;
                     padding-left: 10px;
                 }
             }
-
             &.active a {
                 color: #7a7a7a;
                 border-left: 4px solid #7a7a7a;
@@ -3742,10 +3663,15 @@ a[data-toggle="lightbox"] .img-fluid {
         }
     }
 }
+
+
 /*====== Wall css End ======*/
+
+
 /**  =====================
       X-editable css start
 ==========================  **/
+
 .dotted-line-theme .no_edit {
     width: 100% !important;
 }
@@ -3769,7 +3695,6 @@ a[data-toggle="lightbox"] .img-fluid {
     top: 6px;
     z-index: 999;
     width: 120px;
-
     i {
         color: #fff;
         margin-right: 0;
@@ -3786,7 +3711,7 @@ a[data-toggle="lightbox"] .img-fluid {
     font-size: 13px;
 }
 
-.wizard > .content > .body label.error {
+.wizard>.content>.body label.error {
     margin-left: 0;
 }
 
@@ -3803,10 +3728,15 @@ a[data-toggle="lightbox"] .img-fluid {
     color: $primary-color;
     font-weight: 500;
 }
+
+
 /*====== X-editable css End ======*/
+
+
 /**  =====================
       Invoice css start
 ==========================  **/
+
 .invoice-contact {
     display: flex;
     margin-bottom: 30px;
@@ -3825,8 +3755,8 @@ a[data-toggle="lightbox"] .img-fluid {
     padding: 3px 0;
 }
 
-.invoice-table > tbody > tr:last-child > td,
-.invoice-table > tfoot > tr:last-child > td {
+.invoice-table>tbody>tr:last-child>td,
+.invoice-table>tfoot>tr:last-child>td {
     padding-bottom: 0;
 }
 
@@ -3836,7 +3766,6 @@ a[data-toggle="lightbox"] .img-fluid {
 
 .invoice-order {
     padding-left: 0;
-
     th:first-child {
         padding-left: 0;
         width: 80px;
@@ -3852,11 +3781,9 @@ a[data-toggle="lightbox"] .img-fluid {
     thead th {
         text-align: center;
     }
-
     td {
         vertical-align: middle;
         text-align: center;
-
         &:first-child {
             text-align: left;
         }
@@ -3880,7 +3807,6 @@ a[data-toggle="lightbox"] .img-fluid {
 .invoive-info {
     display: flex;
     margin-bottom: 30px;
-
     h6 {
         margin-bottom: 20px;
         text-transform: uppercase;
@@ -3899,7 +3825,10 @@ a[data-toggle="lightbox"] .img-fluid {
         margin-right: 5px;
     }
 }
+
+
 /**====== Invoice css end ======**/
+
 .grid-layout span {
     display: block;
     border: 1px solid #ddd;
@@ -3915,15 +3844,17 @@ a[data-toggle="lightbox"] .img-fluid {
 
 .inte-benifits {
     border: 1px solid #ddd;
-
     ul {
         list-style: square;
         padding-left: 20px;
     }
 }
+
+
 /**  =====================
       Version css start
 ==========================  **/
+
 .version .card-block {
     padding: 0;
 }
@@ -3941,15 +3872,12 @@ a[data-toggle="lightbox"] .img-fluid {
     display: block;
     padding: 10px 20px;
     cursor: pointer;
-
     &:hover {
         background-color: #f6f7f7;
     }
-
     a {
         color: #666;
     }
-
     span {
         position: absolute;
         right: 20px;
@@ -3965,7 +3893,7 @@ a[data-toggle="lightbox"] .img-fluid {
 }
 
 .introjs-helperNumberLayer {
-    background: linear-gradient(to bottom, lighten($danger-color,5%) 0%, $danger-color 100%);
+    background: linear-gradient(to bottom, lighten($danger-color, 5%) 0%, $danger-color 100%);
 }
 
 .dd-handle,
@@ -3981,20 +3909,33 @@ a[data-toggle="lightbox"] .img-fluid {
     border-top: 1px solid #ddd;
     color: #666;
 }
+
+
 /**====== Version css end ======**/
+
+
 /**====== Date-dropper css ======**/
+
 .dd-w,
 .sp-container {
     z-index: 99;
 }
+
+
 /*====== Color css ends ======= */
+
+
 /**  =====================
       Session Timeout css start
 ==========================  **/
+
 #sessionTimeout-dialog .close {
     display: none;
 }
+
+
 /*====== Session Timeout css ends ======= */
+
 .pull-0 {
     right: auto;
 }
@@ -4142,6 +4083,7 @@ a[data-toggle="lightbox"] .img-fluid {
 .offset-11 {
     margin-left: 91.666667%;
 }
+
 @media (min-width: 576px) {
     .col-sm {
         -webkit-flex-basis: 0;
@@ -4153,7 +4095,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex-grow: 1;
         max-width: 100%;
     }
-
     .col-sm-auto {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 auto;
@@ -4161,7 +4102,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 auto;
         width: auto;
     }
-
     .col-sm-1 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 8.333333%;
@@ -4169,7 +4109,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
     }
-
     .col-sm-2 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 16.666667%;
@@ -4177,7 +4116,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
-
     .col-sm-3 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 25%;
@@ -4185,7 +4123,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 25%;
         max-width: 25%;
     }
-
     .col-sm-4 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 33.333333%;
@@ -4193,7 +4130,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-
     .col-sm-5 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 41.666667%;
@@ -4201,7 +4137,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
-
     .col-sm-6 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 50%;
@@ -4209,7 +4144,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
     .col-sm-7 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 58.333333%;
@@ -4217,7 +4151,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
-
     .col-sm-8 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 66.666667%;
@@ -4225,7 +4158,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-
     .col-sm-9 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 75%;
@@ -4233,7 +4165,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 75%;
         max-width: 75%;
     }
-
     .col-sm-10 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 83.333333%;
@@ -4241,7 +4172,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
-
     .col-sm-11 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 91.666667%;
@@ -4249,7 +4179,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 91.666667%;
         max-width: 91.666667%;
     }
-
     .col-sm-12 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
@@ -4257,159 +4186,122 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .pull-sm-0 {
         right: auto;
     }
-
     .pull-sm-1 {
         right: 8.333333%;
     }
-
     .pull-sm-2 {
         right: 16.666667%;
     }
-
     .pull-sm-3 {
         right: 25%;
     }
-
     .pull-sm-4 {
         right: 33.333333%;
     }
-
     .pull-sm-5 {
         right: 41.666667%;
     }
-
     .pull-sm-6 {
         right: 50%;
     }
-
     .pull-sm-7 {
         right: 58.333333%;
     }
-
     .pull-sm-8 {
         right: 66.666667%;
     }
-
     .pull-sm-9 {
         right: 75%;
     }
-
     .pull-sm-10 {
         right: 83.333333%;
     }
-
     .pull-sm-11 {
         right: 91.666667%;
     }
-
     .pull-sm-12 {
         right: 100%;
     }
-
     .push-sm-0 {
         left: auto;
     }
-
     .push-sm-1 {
         left: 8.333333%;
     }
-
     .push-sm-2 {
         left: 16.666667%;
     }
-
     .push-sm-3 {
         left: 25%;
     }
-
     .push-sm-4 {
         left: 33.333333%;
     }
-
     .push-sm-5 {
         left: 41.666667%;
     }
-
     .push-sm-6 {
         left: 50%;
     }
-
     .push-sm-7 {
         left: 58.333333%;
     }
-
     .push-sm-8 {
         left: 66.666667%;
     }
-
     .push-sm-9 {
         left: 75%;
     }
-
     .push-sm-10 {
         left: 83.333333%;
     }
-
     .push-sm-11 {
         left: 91.666667%;
     }
-
     .push-sm-12 {
         left: 100%;
     }
-
     .offset-sm-0 {
         margin-left: 0;
     }
-
     .offset-sm-1 {
         margin-left: 8.333333%;
     }
-
     .offset-sm-2 {
         margin-left: 16.666667%;
     }
-
     .offset-sm-3 {
         margin-left: 25%;
     }
-
     .offset-sm-4 {
         margin-left: 33.333333%;
     }
-
     .offset-sm-5 {
         margin-left: 41.666667%;
     }
-
     .offset-sm-6 {
         margin-left: 50%;
     }
-
     .offset-sm-7 {
         margin-left: 58.333333%;
     }
-
     .offset-sm-8 {
         margin-left: 66.666667%;
     }
-
     .offset-sm-9 {
         margin-left: 75%;
     }
-
     .offset-sm-10 {
         margin-left: 83.333333%;
     }
-
     .offset-sm-11 {
         margin-left: 91.666667%;
     }
 }
+
 @media (min-width: 768px) {
     .col-md {
         -webkit-flex-basis: 0;
@@ -4421,7 +4313,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex-grow: 1;
         max-width: 100%;
     }
-
     .col-md-auto {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 auto;
@@ -4429,7 +4320,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 auto;
         width: auto;
     }
-
     .col-md-1 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 8.333333%;
@@ -4437,7 +4327,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
     }
-
     .col-md-2 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 16.666667%;
@@ -4445,7 +4334,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
-
     .col-md-3 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 25%;
@@ -4453,7 +4341,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 25%;
         max-width: 25%;
     }
-
     .col-md-4 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 33.333333%;
@@ -4461,7 +4348,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-
     .col-md-5 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 41.666667%;
@@ -4469,7 +4355,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
-
     .col-md-6 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 50%;
@@ -4477,7 +4362,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
     .col-md-7 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 58.333333%;
@@ -4485,7 +4369,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
-
     .col-md-8 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 66.666667%;
@@ -4493,7 +4376,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-
     .col-md-9 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 75%;
@@ -4501,7 +4383,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 75%;
         max-width: 75%;
     }
-
     .col-md-10 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 83.333333%;
@@ -4509,7 +4390,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
-
     .col-md-11 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 91.666667%;
@@ -4517,7 +4397,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 91.666667%;
         max-width: 91.666667%;
     }
-
     .col-md-12 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
@@ -4525,159 +4404,122 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .pull-md-0 {
         right: auto;
     }
-
     .pull-md-1 {
         right: 8.333333%;
     }
-
     .pull-md-2 {
         right: 16.666667%;
     }
-
     .pull-md-3 {
         right: 25%;
     }
-
     .pull-md-4 {
         right: 33.333333%;
     }
-
     .pull-md-5 {
         right: 41.666667%;
     }
-
     .pull-md-6 {
         right: 50%;
     }
-
     .pull-md-7 {
         right: 58.333333%;
     }
-
     .pull-md-8 {
         right: 66.666667%;
     }
-
     .pull-md-9 {
         right: 75%;
     }
-
     .pull-md-10 {
         right: 83.333333%;
     }
-
     .pull-md-11 {
         right: 91.666667%;
     }
-
     .pull-md-12 {
         right: 100%;
     }
-
     .push-md-0 {
         left: auto;
     }
-
     .push-md-1 {
         left: 8.333333%;
     }
-
     .push-md-2 {
         left: 16.666667%;
     }
-
     .push-md-3 {
         left: 25%;
     }
-
     .push-md-4 {
         left: 33.333333%;
     }
-
     .push-md-5 {
         left: 41.666667%;
     }
-
     .push-md-6 {
         left: 50%;
     }
-
     .push-md-7 {
         left: 58.333333%;
     }
-
     .push-md-8 {
         left: 66.666667%;
     }
-
     .push-md-9 {
         left: 75%;
     }
-
     .push-md-10 {
         left: 83.333333%;
     }
-
     .push-md-11 {
         left: 91.666667%;
     }
-
     .push-md-12 {
         left: 100%;
     }
-
     .offset-md-0 {
         margin-left: 0;
     }
-
     .offset-md-1 {
         margin-left: 8.333333%;
     }
-
     .offset-md-2 {
         margin-left: 16.666667%;
     }
-
     .offset-md-3 {
         margin-left: 25%;
     }
-
     .offset-md-4 {
         margin-left: 33.333333%;
     }
-
     .offset-md-5 {
         margin-left: 41.666667%;
     }
-
     .offset-md-6 {
         margin-left: 50%;
     }
-
     .offset-md-7 {
         margin-left: 58.333333%;
     }
-
     .offset-md-8 {
         margin-left: 66.666667%;
     }
-
     .offset-md-9 {
         margin-left: 75%;
     }
-
     .offset-md-10 {
         margin-left: 83.333333%;
     }
-
     .offset-md-11 {
         margin-left: 91.666667%;
     }
 }
+
 @media (min-width: 992px) {
     .col-lg {
         -webkit-flex-basis: 0;
@@ -4689,7 +4531,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex-grow: 1;
         max-width: 100%;
     }
-
     .col-lg-auto {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 auto;
@@ -4697,7 +4538,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 auto;
         width: auto;
     }
-
     .col-lg-1 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 8.333333%;
@@ -4705,7 +4545,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
     }
-
     .col-lg-2 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 16.666667%;
@@ -4713,7 +4552,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
-
     .col-lg-3 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 25%;
@@ -4721,7 +4559,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 25%;
         max-width: 25%;
     }
-
     .col-lg-4 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 33.333333%;
@@ -4729,7 +4566,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-
     .col-lg-5 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 41.666667%;
@@ -4737,7 +4573,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
-
     .col-lg-6 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 50%;
@@ -4745,7 +4580,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
     .col-lg-7 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 58.333333%;
@@ -4753,7 +4587,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
-
     .col-lg-8 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 66.666667%;
@@ -4761,7 +4594,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-
     .col-lg-9 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 75%;
@@ -4769,7 +4601,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 75%;
         max-width: 75%;
     }
-
     .col-lg-10 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 83.333333%;
@@ -4777,7 +4608,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
-
     .col-lg-11 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 91.666667%;
@@ -4785,7 +4615,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 91.666667%;
         max-width: 91.666667%;
     }
-
     .col-lg-12 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
@@ -4793,159 +4622,122 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .pull-lg-0 {
         right: auto;
     }
-
     .pull-lg-1 {
         right: 8.333333%;
     }
-
     .pull-lg-2 {
         right: 16.666667%;
     }
-
     .pull-lg-3 {
         right: 25%;
     }
-
     .pull-lg-4 {
         right: 33.333333%;
     }
-
     .pull-lg-5 {
         right: 41.666667%;
     }
-
     .pull-lg-6 {
         right: 50%;
     }
-
     .pull-lg-7 {
         right: 58.333333%;
     }
-
     .pull-lg-8 {
         right: 66.666667%;
     }
-
     .pull-lg-9 {
         right: 75%;
     }
-
     .pull-lg-10 {
         right: 83.333333%;
     }
-
     .pull-lg-11 {
         right: 91.666667%;
     }
-
     .pull-lg-12 {
         right: 100%;
     }
-
     .push-lg-0 {
         left: auto;
     }
-
     .push-lg-1 {
         left: 8.333333%;
     }
-
     .push-lg-2 {
         left: 16.666667%;
     }
-
     .push-lg-3 {
         left: 25%;
     }
-
     .push-lg-4 {
         left: 33.333333%;
     }
-
     .push-lg-5 {
         left: 41.666667%;
     }
-
     .push-lg-6 {
         left: 50%;
     }
-
     .push-lg-7 {
         left: 58.333333%;
     }
-
     .push-lg-8 {
         left: 66.666667%;
     }
-
     .push-lg-9 {
         left: 75%;
     }
-
     .push-lg-10 {
         left: 83.333333%;
     }
-
     .push-lg-11 {
         left: 91.666667%;
     }
-
     .push-lg-12 {
         left: 100%;
     }
-
     .offset-lg-0 {
         margin-left: 0;
     }
-
     .offset-lg-1 {
         margin-left: 8.333333%;
     }
-
     .offset-lg-2 {
         margin-left: 16.666667%;
     }
-
     .offset-lg-3 {
         margin-left: 25%;
     }
-
     .offset-lg-4 {
         margin-left: 33.333333%;
     }
-
     .offset-lg-5 {
         margin-left: 41.666667%;
     }
-
     .offset-lg-6 {
         margin-left: 50%;
     }
-
     .offset-lg-7 {
         margin-left: 58.333333%;
     }
-
     .offset-lg-8 {
         margin-left: 66.666667%;
     }
-
     .offset-lg-9 {
         margin-left: 75%;
     }
-
     .offset-lg-10 {
         margin-left: 83.333333%;
     }
-
     .offset-lg-11 {
         margin-left: 91.666667%;
     }
 }
+
 @media (min-width: 1200px) {
     .col-xl {
         -webkit-flex-basis: 0;
@@ -4957,7 +4749,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex-grow: 1;
         max-width: 100%;
     }
-
     .col-xl-auto {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 auto;
@@ -4965,7 +4756,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 auto;
         width: auto;
     }
-
     .col-xl-1 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 8.333333%;
@@ -4973,7 +4763,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
     }
-
     .col-xl-2 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 16.666667%;
@@ -4981,7 +4770,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
-
     .col-xl-3 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 25%;
@@ -4989,7 +4777,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 25%;
         max-width: 25%;
     }
-
     .col-xl-4 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 33.333333%;
@@ -4997,7 +4784,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-
     .col-xl-5 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 41.666667%;
@@ -5005,7 +4791,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
-
     .col-xl-6 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 50%;
@@ -5013,7 +4798,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
     .col-xl-7 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 58.333333%;
@@ -5021,7 +4805,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
-
     .col-xl-8 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 66.666667%;
@@ -5029,7 +4812,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-
     .col-xl-9 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 75%;
@@ -5037,7 +4819,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 75%;
         max-width: 75%;
     }
-
     .col-xl-10 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 83.333333%;
@@ -5045,7 +4826,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
-
     .col-xl-11 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 91.666667%;
@@ -5053,7 +4833,6 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 91.666667%;
         max-width: 91.666667%;
     }
-
     .col-xl-12 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
@@ -5061,159 +4840,123 @@ a[data-toggle="lightbox"] .img-fluid {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
     .pull-xl-0 {
         right: auto;
     }
-
     .pull-xl-1 {
         right: 8.333333%;
     }
-
     .pull-xl-2 {
         right: 16.666667%;
     }
-
     .pull-xl-3 {
         right: 25%;
     }
-
     .pull-xl-4 {
         right: 33.333333%;
     }
-
     .pull-xl-5 {
         right: 41.666667%;
     }
-
     .pull-xl-6 {
         right: 50%;
     }
-
     .pull-xl-7 {
         right: 58.333333%;
     }
-
     .pull-xl-8 {
         right: 66.666667%;
     }
-
     .pull-xl-9 {
         right: 75%;
     }
-
     .pull-xl-10 {
         right: 83.333333%;
     }
-
     .pull-xl-11 {
         right: 91.666667%;
     }
-
     .pull-xl-12 {
         right: 100%;
     }
-
     .push-xl-0 {
         left: auto;
     }
-
     .push-xl-1 {
         left: 8.333333%;
     }
-
     .push-xl-2 {
         left: 16.666667%;
     }
-
     .push-xl-3 {
         left: 25%;
     }
-
     .push-xl-4 {
         left: 33.333333%;
     }
-
     .push-xl-5 {
         left: 41.666667%;
     }
-
     .push-xl-6 {
         left: 50%;
     }
-
     .push-xl-7 {
         left: 58.333333%;
     }
-
     .push-xl-8 {
         left: 66.666667%;
     }
-
     .push-xl-9 {
         left: 75%;
     }
-
     .push-xl-10 {
         left: 83.333333%;
     }
-
     .push-xl-11 {
         left: 91.666667%;
     }
-
     .push-xl-12 {
         left: 100%;
     }
-
     .offset-xl-0 {
         margin-left: 0;
     }
-
     .offset-xl-1 {
         margin-left: 8.333333%;
     }
-
     .offset-xl-2 {
         margin-left: 16.666667%;
     }
-
     .offset-xl-3 {
         margin-left: 25%;
     }
-
     .offset-xl-4 {
         margin-left: 33.333333%;
     }
-
     .offset-xl-5 {
         margin-left: 41.666667%;
     }
-
     .offset-xl-6 {
         margin-left: 50%;
     }
-
     .offset-xl-7 {
         margin-left: 58.333333%;
     }
-
     .offset-xl-8 {
         margin-left: 66.666667%;
     }
-
     .offset-xl-9 {
         margin-left: 75%;
     }
-
     .offset-xl-10 {
         margin-left: 83.333333%;
     }
-
     .offset-xl-11 {
         margin-left: 91.666667%;
     }
 }
+
+
 /*====== Warning css starts ======= */
 
 .ie-warning {
@@ -5249,12 +4992,12 @@ a[data-toggle="lightbox"] .img-fluid {
     width: 720px;
 }
 
-.ie-warning .iew-download > li {
+.ie-warning .iew-download>li {
     float: left;
     vertical-align: top;
 }
 
-.ie-warning .iew-download > li > a {
+.ie-warning .iew-download>li>a {
     display: block;
     color: #000;
     width: 140px;
@@ -5262,84 +5005,97 @@ a[data-toggle="lightbox"] .img-fluid {
     padding: 15px 0;
 }
 
-.ie-warning .iew-download > li > a > div {
+.ie-warning .iew-download>li>a>div {
     margin-top: 10px;
 }
 
-.ie-warning .iew-download > li > a:hover {
+.ie-warning .iew-download>li>a:hover {
     background-color: #eee;
 }
+
+
 /*====== Warning css ends ======= */
+
 .image-cropper-container {
     margin-top: 10px;
 }
+
+
 /*====== Json form css start =======*/
+
 .alpaca-field img {
     width: 250px;
 }
+
+
 /*====== Json form css ends =======*/
+
+
 /*====== Sticky css start =======*/
+
 .arrow_box {
     z-index: 0;
 }
+
 @media only screen and (max-width:575px) {
     .sticky-card {
         margin-bottom: 250px;
     }
 }
+
+
 /*====== Sticky css ends =======*/
+
+
 /*====== Ready to use css start ======*/
+
 .j-pro .j-label {
     font-weight: 500;
 }
+
+
 /*====== Ready to use css ends ======*/
+
 .ms-container {
     width: 100%;
 }
 
 .progress {
     height: 1rem;
-
     .progress-bar {
         height: 100%!important;
     }
 }
-// =====================   scroll bar ===========
 
+// =====================   scroll bar ===========
 .pcoded {
     .mCSB_container_wrapper {
         margin-right: 0;
-
-        > .mCSB_container {
+        >.mCSB_container {
             padding-right: 0;
         }
     }
-
     .mCSB_scrollTools {
         width: 10px;
-
         .mCSB_draggerRail {
             background-color: transparent;
             width: 10px;
         }
-
         .mCSB_dragger .mCSB_dragger_bar {
-            background-color: transparentize($inverse-color,1);
+            background-color: transparentize($inverse-color, 1);
         }
-
         .mCSB_dragger.mCSB_dragger_onDrag,
         .mCSB_dragger:active {
             .mCSB_dragger_bar {
-                background-color: transparentize($inverse-color,0.5);
+                background-color: transparentize($inverse-color, 0.5);
             }
         }
     }
-
     #styleSelector,
     .main-menu {
         &:hover {
             .mCSB_dragger_bar {
-                background-color: transparentize($inverse-color,0.8);
+                background-color: transparentize($inverse-color, 0.8);
             }
         }
     }
@@ -5369,25 +5125,22 @@ a[data-toggle="lightbox"] .img-fluid {
         }
     }
 }
+
 @media only screen and (max-width:575px) {
-    .dt-bootstrap4 > div:last-child {
+    .dt-bootstrap4>div:last-child {
         // display: none;
     }
-
     .card .card-header .card-header-right.job-compney-btn {
         position: relative;
         float: left;
         right: 0;
     }
-
     .clndr {
         .event-listing {
             display: none;
         }
-
         .clndr-grid {
             width: 100%;
-
             .day-number {
                 padding: 3px 4px !important;
             }
@@ -5412,20 +5165,19 @@ a[data-toggle="lightbox"] .img-fluid {
 .content-group {
     padding: 10px;
 }
-// ============= draggable css ===================
 
+// ============= draggable css ===================
 .card-sub {
     .card-title {
         margin-bottom: 10px;
         font-weight: 500;
     }
-
     .card-text {
-        color: lighten($light-color,5%);
+        color: lighten($light-color, 5%);
     }
 }
-// ============= long-press-editor css ===================
 
+// ============= long-press-editor css ===================
 .long-press-popup {
     position: fixed;
     bottom: 15px;
@@ -5437,7 +5189,6 @@ a[data-toggle="lightbox"] .img-fluid {
     border-radius: 8px;
     margin: 0;
     font-size: 50px;
-
     li {
         margin-right: 15px;
         margin-top: 15px;
@@ -5445,11 +5196,12 @@ a[data-toggle="lightbox"] .img-fluid {
     }
 }
 
-
 //============================  loadewr ===============================
+
 /**  =====================
       Theme-preloader css start
 ==========================  **/
+
 .theme-loader {
     height: 100%;
     width: 100%;
@@ -5458,7 +5210,6 @@ a[data-toggle="lightbox"] .img-fluid {
     z-index: 999999;
     top: 0;
     left: 0;
-
     .loader-track {
         left: 50%;
         top: 50%;
@@ -5469,6 +5220,7 @@ a[data-toggle="lightbox"] .img-fluid {
         margin: -25px 0 0 -25px;
     }
 }
+
 .preloader-wrapper {
     display: inline-block;
     position: relative;
@@ -5476,31 +5228,33 @@ a[data-toggle="lightbox"] .img-fluid {
     height: 50px;
     animation: container-rotate 1568ms linear infinite
 }
+
 @keyframes container-rotate {
     to {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg)
     }
 }
+
 .spinner-layer {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     border-color: $color-green;
-    &.spinner-blue{
+    &.spinner-blue {
         border-color: $color-blue;
         animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, blue-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     }
-    &.spinner-red{
+    &.spinner-red {
         border-color: $color-red;
         animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, red-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     }
-    &.spinner-yellow{
+    &.spinner-yellow {
         border-color: $color-yellow;
         animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, yellow-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     }
-    &.spinner-green{
+    &.spinner-green {
         border-color: $color-green;
         animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     }
@@ -5550,7 +5304,7 @@ a[data-toggle="lightbox"] .img-fluid {
         right: 0;
         bottom: 0
     }
-    &.left{
+    &.left {
         float: left;
         .circle {
             left: 0;
@@ -5559,7 +5313,7 @@ a[data-toggle="lightbox"] .img-fluid {
             animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
         }
     }
-    &.right{
+    &.right {
         float: right;
         .circle {
             left: -100%;
@@ -5569,9 +5323,11 @@ a[data-toggle="lightbox"] .img-fluid {
         }
     }
 }
+
 #spinnerContainer.cooldown {
     animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0, 0.2, 1)
 }
+
 @keyframes fill-unfill-rotate {
     12.5% {
         transform: rotate(135deg)
@@ -5598,6 +5354,7 @@ a[data-toggle="lightbox"] .img-fluid {
         transform: rotate(1080deg)
     }
 }
+
 @keyframes blue-fade-in-out {
     from {
         opacity: 1
@@ -5618,6 +5375,7 @@ a[data-toggle="lightbox"] .img-fluid {
         opacity: 1
     }
 }
+
 @keyframes red-fade-in-out {
     from {
         opacity: 0
@@ -5635,6 +5393,7 @@ a[data-toggle="lightbox"] .img-fluid {
         opacity: 0
     }
 }
+
 @keyframes yellow-fade-in-out {
     from {
         opacity: 0
@@ -5652,6 +5411,7 @@ a[data-toggle="lightbox"] .img-fluid {
         opacity: 0
     }
 }
+
 @keyframes green-fade-in-out {
     from {
         opacity: 0
@@ -5669,6 +5429,7 @@ a[data-toggle="lightbox"] .img-fluid {
         opacity: 0
     }
 }
+
 @keyframes left-spin {
     from {
         transform: rotate(130deg)
@@ -5680,6 +5441,7 @@ a[data-toggle="lightbox"] .img-fluid {
         transform: rotate(130deg)
     }
 }
+
 @keyframes right-spin {
     from {
         transform: rotate(-130deg)
@@ -5691,6 +5453,7 @@ a[data-toggle="lightbox"] .img-fluid {
         transform: rotate(-130deg)
     }
 }
+
 @keyframes fade-out {
     from {
         opacity: 1
@@ -5699,25 +5462,28 @@ a[data-toggle="lightbox"] .img-fluid {
         opacity: 0
     }
 }
-select.form-control:not([size]):not([multiple]){
+
+select.form-control:not([size]):not([multiple]) {
     height: 43px;
 }
-.jFiler{
-    &.jFiler-theme-default{
-        .jFiler-input{
-            border:none;
-            border-bottom:2px solid #ccc;
+
+.jFiler {
+    &.jFiler-theme-default {
+        .jFiler-input {
+            border: none;
+            border-bottom: 2px solid #ccc;
             box-shadow: none;
             border-radius: 0;
             height: 40px;
         }
-        .jFiler-input-button{
+        .jFiler-input-button {
             border-radius: 4px;
             height: auto;
             padding: 7px 19px;
         }
     }
 }
+
 #main-chat,
 .full-calender {
     .page-error {
@@ -5738,15 +5504,17 @@ select.form-control:not([size]):not([multiple]){
         }
     }
 }
-.wizard > .content{
+
+.wizard>.content {
     min-height: 36em;
     overflow-y: auto;
-    > .body input.form-control{
+    >.body input.form-control {
         border-top: none;
-        border-right:none;
-        border-left:none;
+        border-right: none;
+        border-left: none;
     }
 }
-.tabledit-input:disabled{
+
+.tabledit-input:disabled {
     display: none;
 }

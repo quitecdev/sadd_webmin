@@ -16,6 +16,7 @@ export class BusquedaComponent implements OnInit {
   submitted = false;
   documentos: Documento[];
   error = '';
+  contador:number;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -40,6 +41,7 @@ export class BusquedaComponent implements OnInit {
   busquedaRapida() {
 
     this.submitted = true;
+    this.documentos= [];
     // stop here if form is invalid
     if (this.busquedaRapidaForm.invalid) {
       return;
@@ -51,6 +53,7 @@ export class BusquedaComponent implements OnInit {
         (response: Documento[]) => {
           this.documentos = response;
           this.loading = false;
+          this.contador=this.documentos.length;
         },
         error => {
           if (error.error.message === undefined) {

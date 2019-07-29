@@ -5,6 +5,7 @@ import { BusquedaComponent } from './busqueda.component';
 import {SharedModule} from '../../shared/shared.module';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [BusquedaComponent],
   imports: [
@@ -12,7 +13,7 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     BusquedaRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class BusquedaModule { }

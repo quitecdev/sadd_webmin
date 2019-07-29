@@ -6,5 +6,5 @@ export interface Documento{
   arcPaginas?:number,
   pagNombre?:string,
   pagMini?:string,
-  metadata?:string
+  metadata?:{}
 }
