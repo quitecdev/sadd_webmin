@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { Documento } from '../../models/documento';
+import {transition, trigger, style, animate} from '@angular/animations';
 import { DocumentoService } from "../../services/documento.service";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -66,6 +67,15 @@ export class BusquedaComponent implements OnInit {
           this.loading = false;
         }
       );
+  }
+
+  openMyModal(event,arcCod) {
+    document.querySelector('#' + event).classList.add('md-show');
+    console.log(arcCod);
+  }
+
+  closeMyModal(event) {
+    ((event.target.parentElement.parentElement).parentElement).classList.remove('md-show');
   }
 
 }
