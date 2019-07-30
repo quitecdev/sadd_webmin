@@ -71,6 +71,7 @@ export class BusquedaComponent implements OnInit {
 
   openMyModal(event,arcCod) {
     document.querySelector('#' + event).classList.add('md-show');
+<<<<<<< HEAD
     this._documentoService.getDocumentoPagi(arcCod)
     .subscribe(
       (response) => {
@@ -86,10 +87,17 @@ export class BusquedaComponent implements OnInit {
         console.log(this.error);
       }
     );
+=======
+    console.log(arcCod);
+>>>>>>> 01f3ebf2043146a1485beb12b7dcc2bc0898e060
   }
 
   closeMyModal(event) {
     ((event.target.parentElement.parentElement).parentElement).classList.remove('md-show');
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 01f3ebf2043146a1485beb12b7dcc2bc0898e060
