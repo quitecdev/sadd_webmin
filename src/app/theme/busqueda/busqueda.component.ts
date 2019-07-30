@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { Documento } from '../../models/documento';
+import {transition, trigger, style, animate} from '@angular/animations';
 import { DocumentoService } from "../../services/documento.service";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -66,6 +67,29 @@ export class BusquedaComponent implements OnInit {
           this.loading = false;
         }
       );
+  }
+
+  openMyModal(event,arcCod) {
+    document.querySelector('#' + event).classList.add('md-show');
+    this._documentoService.getDocumentoPagi(arcCod)
+    .subscribe(
+      (response) => {
+        console.log(response);
+      },
+      error => {
+        // if (error.error.message === undefined) {
+        //   this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
+        // }
+        // else {
+        //   this.error = error.error.message;
+        // }
+        console.log(this.error);
+      }
+    );
+  }
+
+  closeMyModal(event) {
+    ((event.target.parentElement.parentElement).parentElement).classList.remove('md-show');
   }
 
 }
