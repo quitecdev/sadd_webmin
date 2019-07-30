@@ -1,17 +1,4 @@
 <div class="page-body">
-<<<<<<< HEAD
-    <div class="row">
-        <div class="col-sm-12">
-            <!-- Search result 2 card start -->
-            <div class="card">
-                <div class="card-block">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3">
-                            <p class="txt-highlight text-center m-t-20">
-                                La potencia de la búsqueda por metadatos evita que la información se pierda en el sistema y maximiza su valor poniéndola a disposición del usuario cuando lo necesita.
-                            </p>
-                        </div>
-=======
   <div class="row">
     <div class="col-sm-12">
       <!-- Search result 2 card start -->
@@ -43,7 +30,6 @@
                       <span class="messages">
                         <p class="text-danger error">Ingrese un indice de busqueda</p>
                       </span>
->>>>>>> 01f3ebf2043146a1485beb12b7dcc2bc0898e060
                     </div>
                   </div>
                 </div>
@@ -109,8 +95,8 @@
                                 <h6>{{data.titulo}} :</h6>
                               </div>
                               <div class="col text-left">
-                                <code *ngIf="data.estado===1">{{data.descripcion}}</code>
-                                <p *ngIf="data.estado===0">{{data.descripcion}}</p>
+                                <div class="text-danger" *ngIf="data.estado===1"><strong>{{data.descripcion}}</strong></div>
+                                <div *ngIf="data.estado===0">{{data.descripcion}}</div>
                               </div>
                             </div>
                             <p class="p-t-10">
@@ -120,55 +106,7 @@
                                   class="fa fa-cloud-download"></i>Border Button</button>
                             </p>
 
-<<<<<<< HEAD
-                        <div class="col-xl-12 col-md-12" *ngFor="let documento of documentos">
-                            <div class="card social-user o-hidden">
-                                <div class="card-header">
-                                    <div class="card-header-left">
-                                        <h5>
-                                            Libreria: {{documento.libNombre}}
-                                        </h5>
-                                        <strong>
-                                            Páginas: {{documento.arcPaginas}}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div class="card-block">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img [src]="documento.pagMini" class="img-fluid z-depth-bottom-3">
-                                        </div>
-                                        <div class="col-md-7 offset-md-1">
-                                            <div class="card-block">
-                                                <div class="row align-items-center">
-                                                    <div class="col p-t-20 p-b-30">
-                                                        <div class="row" *ngFor="let data of documento.metadata">
-                                                            <div class="col text-c-blue">
-                                                                <h6>{{data.titulo}} :</h6>
-                                                            </div>
-                                                            <div class="col text-left">
-                                                                <code *ngIf="data.estado===1">{{data.descripcion}}</code>
-                                                                <p *ngIf="data.estado===0">{{data.descripcion}}</p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="p-t-10">
-                                                            <button class="btn btn-primary btn-block btn-sm" (click)="openMyModal('effect-2',documento.arcCod)"><i
-                                                                    class="fa fa-eye"></i>Visualizar</button>
-                                                            <button class="btn btn-inverse btn-block btn-sm"><i
-                                                                    class="fa fa-cloud-download"></i>Border
-                                                                Button</button>
-                                                        </p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-=======
                           </div>
->>>>>>> 01f3ebf2043146a1485beb12b7dcc2bc0898e060
                         </div>
                       </div>
                     </div>
@@ -214,81 +152,28 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
-        <app-modal-animation [modalID]="'effect-2'" [modalClass]="'modal-full md-effect-2'">
+        <app-modal-animation [modalID]="'effect-2'" [modalClass]="'md-effect-2'">
             <h3>Modal Dialog</h3>
             <div>
                 <div class="row">
                     <div class="col-md-3">
                         <h1>Lista Paginas</h1>
-                        Atque laudantium sint doloremque accusamus. Est ullam deleniti eos maxime. Ipsa non sit quaerat voluptates pariatur voluptatem repellendus vitae dolore. Repudiandae vitae saepe eaque. Tempora facilis ipsum sed nihil repellat harum est laudantium veniam.
-                        Nostrum voluptas nihil molestiae aut sit sint non quaerat sunt. Delectus ut repellat et ea qui. Et fugit quis id ea qui eum. Cum delectus repudiandae vero placeat ullam voluptatum est consequatur. Dolor recusandae error et. Vitae
-                        et minus. Excepturi ut quasi molestiae eligendi voluptatem assumenda impedit suscipit. Dolore iusto dolor hic architecto. Et nam in est. Odit voluptas voluptates error molestiae velit. Nostrum ullam vel rerum magnam ut nam inventore
-                        porro ea. Similique quasi laborum consectetur voluptatum deleniti aut dolorum accusantium magnam. Voluptatibus repellendus occaecati delectus possimus. Officia eveniet quisquam et repellendus et quaerat consequatur. Sapiente facere
-                        porro. Molestias autem labore aut velit. Nam autem voluptas similique dolorem qui odit libero. Placeat doloremque adipisci at quia aliquam omnis. Voluptates aspernatur distinctio laborum et sed perferendis minus vel. Expedita dolores
-                        nobis architecto aut est deleniti vel dolor est. Et omnis necessitatibus neque et atque omnis molestiae. Neque ipsa dolores numquam. Nam expedita nobis. Atque laudantium sint doloremque accusamus. Est ullam deleniti eos maxime.
-                        Ipsa non sit quaerat voluptates pariatur voluptatem repellendus vitae dolore. Repudiandae vitae saepe eaque. Tempora facilis ipsum sed nihil repellat harum est laudantium veniam. Nostrum voluptas nihil molestiae aut sit sint non
-                        quaerat sunt. Delectus ut repellat et ea qui. Et fugit quis id ea qui eum. Cum delectus repudiandae vero placeat ullam voluptatum est consequatur. Dolor recusandae error et. Vitae et minus. Excepturi ut quasi molestiae eligendi
-                        voluptatem assumenda impedit suscipit. Dolore iusto dolor hic architecto. Et nam in est. Odit voluptas voluptates error molestiae velit. Nostrum ullam vel rerum magnam ut nam inventore porro ea. Similique quasi laborum consectetur
-                        voluptatum deleniti aut dolorum accusantium magnam. Voluptatibus repellendus occaecati delectus possimus. Officia eveniet quisquam et repellendus et quaerat consequatur. Sapiente facere porro. Molestias autem labore aut velit.
-                        Nam autem voluptas similique dolorem qui odit libero. Placeat doloremque adipisci at quia aliquam omnis. Voluptates aspernatur distinctio laborum et sed perferendis minus vel. Expedita dolores nobis architecto aut est deleniti
-                        vel dolor est. Et omnis necessitatibus neque et atque omnis molestiae. Neque ipsa dolores numquam. Nam expedita nobis. Atque laudantium sint doloremque accusamus. Est ullam deleniti eos maxime. Ipsa non sit quaerat voluptates pariatur
-                        voluptatem repellendus vitae dolore. Repudiandae vitae saepe eaque. Tempora facilis ipsum sed nihil repellat harum est laudantium veniam. Nostrum voluptas nihil molestiae aut sit sint non quaerat sunt. Delectus ut repellat et ea
-                        qui. Et fugit quis id ea qui eum. Cum delectus repudiandae vero placeat ullam voluptatum est consequatur. Dolor recusandae error et. Vitae et minus. Excepturi ut quasi molestiae eligendi voluptatem assumenda impedit suscipit. Dolore
-                        iusto dolor hic architecto. Et nam in est. Odit voluptas voluptates error molestiae velit. Nostrum ullam vel rerum magnam ut nam inventore porro ea. Similique quasi laborum consectetur voluptatum deleniti aut dolorum accusantium
-                        magnam. Voluptatibus repellendus occaecati delectus possimus. Officia eveniet quisquam et repellendus et quaerat consequatur. Sapiente facere porro. Molestias autem labore aut velit. Nam autem voluptas similique dolorem qui odit
-                        libero. Placeat doloremque adipisci at quia aliquam omnis. Voluptates aspernatur distinctio laborum et sed perferendis minus vel. Expedita dolores nobis architecto aut est deleniti vel dolor est. Et omnis necessitatibus neque et
-                        atque omnis molestiae. Neque ipsa dolores numquam. Nam expedita nobis.
+                        <ul>
+                          <li *ngFor="let pagina of paginas">
+                             {{ pagina.pagNombre}}
+                          </li>
+                        </ul>
                     </div>
                     <div class="col-md-6">
                         <h1>Visor</h1>
                     </div>
                     <div class="col-md-3">
                         <h1>Paginas Seleccionadas</h1>
-                        Atque laudantium sint doloremque accusamus. Est ullam deleniti eos maxime. Ipsa non sit quaerat voluptates pariatur voluptatem repellendus vitae dolore. Repudiandae vitae saepe eaque. Tempora facilis ipsum sed nihil repellat harum est laudantium veniam.
-                        Nostrum voluptas nihil molestiae aut sit sint non quaerat sunt. Delectus ut repellat et ea qui. Et fugit quis id ea qui eum. Cum delectus repudiandae vero placeat ullam voluptatum est consequatur. Dolor recusandae error et. Vitae
-                        et minus. Excepturi ut quasi molestiae eligendi voluptatem assumenda impedit suscipit. Dolore iusto dolor hic architecto. Et nam in est. Odit voluptas voluptates error molestiae velit. Nostrum ullam vel rerum magnam ut nam inventore
-                        porro ea. Similique quasi laborum consectetur voluptatum deleniti aut dolorum accusantium magnam. Voluptatibus repellendus occaecati delectus possimus. Officia eveniet quisquam et repellendus et quaerat consequatur. Sapiente facere
-                        porro. Molestias autem labore aut velit. Nam autem voluptas similique dolorem qui odit libero. Placeat doloremque adipisci at quia aliquam omnis. Voluptates aspernatur distinctio laborum et sed perferendis minus vel. Expedita dolores
-                        nobis architecto aut est deleniti vel dolor est. Et omnis necessitatibus neque et atque omnis molestiae. Neque ipsa dolores numquam. Nam expedita nobis. Atque laudantium sint doloremque accusamus. Est ullam deleniti eos maxime.
-                        Ipsa non sit quaerat voluptates pariatur voluptatem repellendus vitae dolore. Repudiandae vitae saepe eaque. Tempora facilis ipsum sed nihil repellat harum est laudantium veniam. Nostrum voluptas nihil molestiae aut sit sint non
-                        quaerat sunt. Delectus ut repellat et ea qui. Et fugit quis id ea qui eum. Cum delectus repudiandae vero placeat ullam voluptatum est consequatur. Dolor recusandae error et. Vitae et minus. Excepturi ut quasi molestiae eligendi
-                        voluptatem assumenda impedit suscipit. Dolore iusto dolor hic architecto. Et nam in est. Odit voluptas voluptates error molestiae velit. Nostrum ullam vel rerum magnam ut nam inventore porro ea. Similique quasi laborum consectetur
-                        voluptatum deleniti aut dolorum accusantium magnam. Voluptatibus repellendus occaecati delectus possimus. Officia eveniet quisquam et repellendus et quaerat consequatur. Sapiente facere porro. Molestias autem labore aut velit.
-                        Nam autem voluptas similique dolorem qui odit libero. Placeat doloremque adipisci at quia aliquam omnis. Voluptates aspernatur distinctio laborum et sed perferendis minus vel. Expedita dolores nobis architecto aut est deleniti
-                        vel dolor est. Et omnis necessitatibus neque et atque omnis molestiae. Neque ipsa dolores numquam. Nam expedita nobis. Atque laudantium sint doloremque accusamus. Est ullam deleniti eos maxime. Ipsa non sit quaerat voluptates pariatur
-                        voluptatem repellendus vitae dolore. Repudiandae vitae saepe eaque. Tempora facilis ipsum sed nihil repellat harum est laudantium veniam. Nostrum voluptas nihil molestiae aut sit sint non quaerat sunt. Delectus ut repellat et ea
-                        qui. Et fugit quis id ea qui eum. Cum delectus repudiandae vero placeat ullam voluptatum est consequatur. Dolor recusandae error et. Vitae et minus. Excepturi ut quasi molestiae eligendi voluptatem assumenda impedit suscipit. Dolore
-                        iusto dolor hic architecto. Et nam in est. Odit voluptas voluptates error molestiae velit. Nostrum ullam vel rerum magnam ut nam inventore porro ea. Similique quasi laborum consectetur voluptatum deleniti aut dolorum accusantium
-                        magnam. Voluptatibus repellendus occaecati delectus possimus. Officia eveniet quisquam et repellendus et quaerat consequatur. Sapiente facere porro. Molestias autem labore aut velit. Nam autem voluptas similique dolorem qui odit
-                        libero. Placeat doloremque adipisci at quia aliquam omnis. Voluptates aspernatur distinctio laborum et sed perferendis minus vel. Expedita dolores nobis architecto aut est deleniti vel dolor est. Et omnis necessitatibus neque et
-                        atque omnis molestiae. Neque ipsa dolores numquam. Nam expedita nobis.
                     </div>
-
                 </div>
             </div>
         </app-modal-animation>
-=======
-      </div>
->>>>>>> 01f3ebf2043146a1485beb12b7dcc2bc0898e060
     </div>
-
-    <app-modal-animation [modalID]="'effect-2'" [modalClass]="'md-effect-2'">
-      <h3>Modal Dialog</h3>
-      <div>
-        <p>This is a modal window. You can do the following things with it:</p>
-        <ul>
-          <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read
-            what they say.</li>
-          <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate
-            its presence.</li>
-          <li><strong>Close:</strong> click on the button below to close the modal.</li>
-        </ul>
-        <button (click)="closeMyModal($event)" class="btn btn-primary md-close">Close Me!!</button>
-      </div>
-      <button (click)="closeMyModal($event)" aria-label="Close" class="md-close-btn"><i
-          class="icofont icofont-ui-close"></i></button>
-    </app-modal-animation>
   </div>
 </div>
