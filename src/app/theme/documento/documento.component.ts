@@ -1,0 +1,57 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { DocumentoService } from "../../services/documento.service";
+import { DocumentoPagi } from '../../models/documentoPagi';
+
+@Component({
+  selector: 'app-documento',
+  templateUrl: './documento.component.html',
+  styleUrls: ['./documento.component.scss']
+})
+export class DocumentoComponent implements OnInit {
+
+  paginas: DocumentoPagi[];
+
+  constructor(
+    private _route: ActivatedRoute,
+    private _documentoService: DocumentoService
+  ) {
+    this.getPagiDocumento(this._route.snapshot.paramMap.get("id"));
+  }
+
+  ngOnInit() {
+
+  }
+
+  getPagiDocumento(hex: string) {
+    let arcCod = this.hex_to_ascii(hex);
+
+    this._documentoService.getDocumentoPagi(arcCod)
+    .subscribe(
+      (response : DocumentoPagi[]) => {
+       this.paginas=response;
+      },
+      error => {
+        // if (error.error.message === undefined) {
+        //   this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
+        // }
+        // else {
+        //   this.error = error.error.message;
+        // }
+        console.log(error);
+      }
+    );
+
+  }
+
+
+  hex_to_ascii(hex: string) {
+    var hex = hex.toString();
+    var str = '';
+    for (var n = 0; n < hex.length; n += 2) {
+      str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+    }
+    return str;
+  }
+
+}

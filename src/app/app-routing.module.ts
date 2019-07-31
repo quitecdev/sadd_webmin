@@ -17,8 +17,13 @@ const routes: Routes = [
       },
       {
         path: 'busqueda',
-        loadChildren: './theme/busqueda/busqueda.module#BusquedaModule'
-        //canActivate: [AuthGuard]
+        loadChildren: './theme/busqueda/busqueda.module#BusquedaModule',
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'documento/:id',
+        loadChildren: './theme/documento/documento.module#DocumentoModule',
+        canActivate: [AuthGuard]
       },
       {
         path: 'dashboard',

@@ -17,7 +17,6 @@ export class BusquedaComponent implements OnInit {
   loading = false;
   submitted = false;
   documentos: Documento[];
-  paginas:DocumentoPagi[];
   error = '';
   contador:number;
 
@@ -69,29 +68,6 @@ export class BusquedaComponent implements OnInit {
           this.loading = false;
         }
       );
-  }
-
-  openMyModal(event,arcCod) {
-    document.querySelector('#' + event).classList.add('md-show');
-    this._documentoService.getDocumentoPagi(arcCod)
-    .subscribe(
-      (response : DocumentoPagi[]) => {
-       this.paginas=response;
-      },
-      error => {
-        // if (error.error.message === undefined) {
-        //   this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
-        // }
-        // else {
-        //   this.error = error.error.message;
-        // }
-        console.log(this.error);
-      }
-    );
-  }
-
-  closeMyModal(event) {
-    ((event.target.parentElement.parentElement).parentElement).classList.remove('md-show');
   }
 
 }

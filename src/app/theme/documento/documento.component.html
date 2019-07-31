@@ -1,0 +1,19 @@
+<div class="page-body">
+    <div class="row">
+        <div class="col-xl-3 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h5>páginas</h5>
+                </div>
+                <div class="card-block">
+                    <div class="align-middle m-b-10" *ngFor="let pagina of paginas">
+                        <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-100 align-top m-r-15">
+                        <div class="d-inline-block">
+                            <h6>{{pagina.pagNombre}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
