@@ -1,19 +1,92 @@
 <div class="page-body">
-    <div class="row">
-        <div class="col-xl-3 col-md-12">
-            <div class="card ">
-                <div class="card-header">
-                    <h5>páginas</h5>
-                </div>
-                <div class="card-block">
-                    <div class="align-middle m-b-10" *ngFor="let pagina of paginas">
-                        <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-100 align-top m-r-15">
-                        <div class="d-inline-block">
-                            <h6>{{pagina.pagNombre}}</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div *ngIf="error" class="alert alert-danger background-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <i class="icofont icofont-close-line-circled text-white"></i>
+        </button>
+        <strong>Error !</strong> {{error}}
+      </div>
     </div>
+
+    <div class="col-xl-2 col-md-12">
+      <div class="card ">
+        <div class="card-header">
+          <h5>Páginas</h5>
+        </div>
+        <div class="card-block text-center">
+          <div *ngIf="loadingPagi">
+            <div class="text-center">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <ul *ngIf="paginas" class="basic-list">
+            <li class="" *ngFor="let pagina of paginas">
+              <p>
+                <a [routerLink]="" (click)="viewPagi(pagina.pagId)">
+                  <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-70 align-top">
+                </a>
+              </p>
+              <div class="border-checkbox-section">
+                <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(pagina.pagId)">
+                  <input class="border-checkbox" type="checkbox" [id]="pagina.pagId">
+                  <label class="border-checkbox-label" [for]="pagina.pagId">{{pagina.pagNombre}}</label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 col-md-12">
+      <div class="card ">
+        <div class="card-header">
+          <h5>Visor</h5>
+        </div>
+        <div class="card-block text-center">
+          <div *ngIf="loadingView">
+            <div class="text-center">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <img *ngIf="imageView" [src]="imageView" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-md-12">
+        <div class="card ">
+          <div class="card-header">
+            <h5>Páginas Seleccionadas</h5>
+          </div>
+          <div class="card-block text-center">
+            <!-- <div *ngIf="loadingPagi">
+              <div class="text-center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <ul *ngIf="paginas" class="basic-list">
+              <li class="" *ngFor="let pagina of paginas">
+                <p>
+                  <a [routerLink]="" (click)="viewPagi(pagina.pagId)">
+                    <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-70 align-top">
+                  </a>
+                </p>
+                <div class="border-checkbox-section">
+                  <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(pagina.pagId)">
+                    <input class="border-checkbox" type="checkbox" [id]="pagina.pagId">
+                    <label class="border-checkbox-label" [for]="pagina.pagId">{{pagina.pagNombre}}</label>
+                  </div>
+                </div>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+  </div>
 </div>

@@ -15,7 +15,6 @@ import {BreadcrumbsComponent} from './layout/admin/breadcrumbs/breadcrumbs.compo
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
