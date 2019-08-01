@@ -14,7 +14,6 @@ import {MenuItems} from './shared/menu-items/menu-items';
 import {BreadcrumbsComponent} from './layout/admin/breadcrumbs/breadcrumbs.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

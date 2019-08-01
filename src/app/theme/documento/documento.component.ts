@@ -1,5 +1,5 @@
 import { DocumentoPagi } from './../../models/documentoPagi';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { DocumentoService } from "../../services/documento.service";
 
@@ -19,7 +19,8 @@ export class DocumentoComponent implements OnInit {
   error = '';
 
   paginas: DocumentoPagi[];
-  numbers: number[] = [];
+
+
 
   constructor(
     private _route: ActivatedRoute,
@@ -28,11 +29,6 @@ export class DocumentoComponent implements OnInit {
   ) {
     this.paginas = [];
     this.getPagiDocumento(this._route.snapshot.paramMap.get("id"));
-    for (let index = 0; index < 10000; index++) {
-      this.numbers.push(index);
-    }
-
-    console.log(this.numbers);
   }
 
   ngOnInit() {
@@ -46,7 +42,7 @@ export class DocumentoComponent implements OnInit {
       .subscribe(
         (response: DocumentoPagi[]) => {
           if (response === null) {
-            this._router.navigateByUrl('/busqueda');
+            //this._router.navigateByUrl('/busqueda');
           }
           else {
             this.paginas = response;
@@ -65,7 +61,6 @@ export class DocumentoComponent implements OnInit {
           this.loadingPagi = false;
         }
       );
-
   }
 
   hex_to_ascii(hex: string) {
@@ -78,15 +73,15 @@ export class DocumentoComponent implements OnInit {
   }
 
   viewPagi(_idPagi: number) {
-    this.loadingView=true;
-    this.imageView = this.paginas.find(x=>x.pagId==_idPagi).urlPagi;
-    this.loadingView=false;
+    this.loadingView = true;
+    this.imageView = this.paginas.find(x => x.pagId == _idPagi).urlPagi;
+    this.loadingView = false;
   }
 
-  selectPagi(_idPagi: number){
-    this.loadingView=true;
-    this.imageView = this.paginas.find(x=>x.pagId==_idPagi).urlPagi;
-    this.loadingView=false;
+  selectPagi(_idPagi: number) {
+    this.loadingView = true;
+    this.imageView = this.paginas.find(x => x.pagId == _idPagi).urlPagi;
+    this.loadingView = false;
   }
 
 }
