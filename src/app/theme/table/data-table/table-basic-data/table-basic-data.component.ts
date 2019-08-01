@@ -27,7 +27,7 @@ export class TableBasicDataComponent implements OnInit {
 
   rowsFilter = [];
   tempFilter = [];
-  @ViewChild(DatatableComponent) table: DatatableComponent;
+  @ViewChild(DatatableComponent,{static: false}) table: DatatableComponent;
 
   constructor() {
     this.fetchBasicData((data) => {

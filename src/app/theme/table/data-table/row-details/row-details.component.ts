@@ -9,7 +9,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
   ]
 })
 export class RowDetailsComponent implements OnInit {
-  @ViewChild('myTable') table: any;
+  @ViewChild('myTable',{static: false}) table: any;
 
   public rows: any[] = [];
   public expanded: any = {};

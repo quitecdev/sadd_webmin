@@ -11,8 +11,8 @@ declare const $: any;
   ]
 })
 export class TaskIssueComponent implements OnInit {
-  @ViewChild('issueText1') issueText1: any;
-  @ViewChild('issueBar1') issueBar1: any;
+  @ViewChild('issueText1',{static: false}) issueText1: any;
+  @ViewChild('issueBar1',{static: false}) issueBar1: any;
 
   public data: any;
   public rowsOnPage = 10;

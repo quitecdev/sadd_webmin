@@ -19,6 +19,7 @@ export class DocumentoComponent implements OnInit {
   error = '';
 
   paginas: DocumentoPagi[];
+  numbers: number[] = [];
 
   constructor(
     private _route: ActivatedRoute,
@@ -27,6 +28,11 @@ export class DocumentoComponent implements OnInit {
   ) {
     this.paginas = [];
     this.getPagiDocumento(this._route.snapshot.paramMap.get("id"));
+    for (let index = 0; index < 10000; index++) {
+      this.numbers.push(index);
+    }
+
+    console.log(this.numbers);
   }
 
   ngOnInit() {

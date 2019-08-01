@@ -23,7 +23,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule.forRoot(),
+    NgbModule,
     HttpClientModule,
     PerfectScrollbarModule,
     ClickOutsideModule

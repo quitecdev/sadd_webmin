@@ -14,7 +14,7 @@ import {DragAndDropModule} from 'angular-draggable-droppable';
     CommonModule,
     EventCalendarRoutingModule,
     SharedModule,
-    CalendarModule.forRoot(),
+    CalendarModule,
     TagInputModule,
     FormsModule,
     DragAndDropModule
