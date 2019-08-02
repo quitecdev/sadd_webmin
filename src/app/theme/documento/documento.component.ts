@@ -17,6 +17,7 @@ export class DocumentoComponent implements OnInit {
 
   imageView = '';
   error = '';
+  shown='hover';
 
   paginas: DocumentoPagi[];
 

@@ -6,9 +6,6 @@ import { DocumentoComponent } from './documento.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
-
-import 'hammerjs';
-
 @NgModule({
   declarations: [DocumentoComponent],
   imports: [
