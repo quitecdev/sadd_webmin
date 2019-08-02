@@ -16,6 +16,11 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       },
       {
+        path: 'dashboard',
+        loadChildren: './theme/dashboard/dashboard.module#DashboardModule',
+        canActivate: [AuthGuard]
+      },
+      {
         path: 'busqueda',
         loadChildren: './theme/busqueda/busqueda.module#BusquedaModule',
         canActivate: [AuthGuard]
@@ -26,8 +31,8 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       },
       {
-        path: 'dashboard',
-        loadChildren: './theme/dashboard/dashboard.module#DashboardModule',
+        path: 'ejemplo',
+        loadChildren: './theme/ejemplo/ejemplo.module#EjemploModule',
         canActivate: [AuthGuard]
       },
       {

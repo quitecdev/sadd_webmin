@@ -5,6 +5,9 @@ import { DocumentoRoutingModule } from './documento-routing.module';
 import { DocumentoComponent } from './documento.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+// import ngx-viewer module
+import { NgxViewerModule } from 'ngx-viewer';
+
 
 @NgModule({
   declarations: [DocumentoComponent],
@@ -13,6 +16,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     DocumentoRoutingModule,
     NgScrollbarModule,
     ScrollingModule,
+    NgxViewerModule
   ]
 })
 export class DocumentoModule { }

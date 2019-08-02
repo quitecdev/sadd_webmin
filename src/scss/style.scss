@@ -33,6 +33,9 @@ File: style.scss
 @import "partials/mixins";
 @import "partials/general";
 @import "partials/generic";
+
+@import '~viewerjs/dist/viewer.css';
+
 // Menu
 @import "partials/menu/pcmenu";
 // Important Theme elements
@@ -83,3 +86,4 @@ File: style.scss
 
 //angular custom
 @import "partials/custom";
+

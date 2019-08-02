@@ -1,0 +1,39 @@
+ng-scrollbar {
+  --scrollbar-size: 8px;
+  --scrollbar-thumb-color: rgba(94, 175, 255, 0.5);
+  --scrollbar-thumb-hover-color: dodgerblue;
+  --scrollbar-border-radius: 4px;
+  border: 1px solid gray;
+}
+
+
+::ng-deep {
+  ng-scrollbar.white-theme {
+    height: 800px;
+    max-height: 800px;
+
+  }
+}
+
+.sample {
+  }
+
+
+  .inner {
+    width: 140%;
+  }
+
+  .example-item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+
+    &:nth-child(odd) {
+      background: #f1ffff;
+    }
+
+    &:nth-child(even) {
+      background: #ecf8ff;
+    }
+  }
