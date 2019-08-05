@@ -4,5 +4,6 @@ export interface DocumentoPagi {
     urlPagi?:string,
     pagNombre?:string,
     pagOrden?:number,
-    pagTamano?:number
+    pagTamano?:number,
+    isSelected?: boolean
 }

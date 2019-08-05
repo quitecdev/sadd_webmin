@@ -1,109 +1,129 @@
 <div class="page-body">
-  <div class="row">
-    <div class="col-lg-12">
-      <div *ngIf="error" class="alert alert-danger background-danger">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <i class="icofont icofont-close-line-circled text-white"></i>
-        </button>
-        <strong>Error !</strong> {{error}}
-      </div>
-    </div>
-
-    <div class="col-xl-2 col-md-12">
-      <div class="card ">
-        <div class="card-header">
-          <h5>Páginas</h5>
-        </div>
-        <div class=" row card-block text-center">
-          <div class="col-md-12 col-lg-12">
-            <div *ngIf="loadingPagi">
-              <div class="text-center">
-                <div class="spinner-border text-primary" role="status">
-                  <span class="sr-only">Loading...</span>
-                </div>
-              </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div *ngIf="error" class="alert alert-danger background-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <i class="icofont icofont-close-line-circled text-white"></i>
+                </button>
+                <strong>Error !</strong> {{error}}
             </div>
-          </div>
-          <div class="col-md-12 col-lg-12">
-            <ul *ngIf="!loadingPagi" class="basic-list">
-              <li>
-                <div class="border-checkbox-section">
-                  <div class="border-checkbox-group border-checkbox-group-primary">
-                    <input class="border-checkbox" type="checkbox" id="selectAll">
-                    <label class="border-checkbox-label" for="selectAll">Seleccionar Todo</label>
-                  </div>
+        </div>
+
+        <div class="col-xl-2 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h5>Páginas</h5>
                 </div>
-              </li>
-            </ul>
-            <ul class="basic-list">
-              <cdk-virtual-scroll-viewport style="height: 900px" itemSize="75">
-                <li *cdkVirtualFor="let pagina of paginas" class="">
-                  <p>
-                    <a [routerLink]="" (click)="viewPagi(pagina.pagId)">
-                      <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-60 z-depth-bottom-3">
-                    </a>
-                  </p>
-                  <div class="border-checkbox-section">
-                    <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(pagina.pagId)">
-                      <input class="border-checkbox" type="checkbox" [id]="pagina.pagId">
-                      <label class="border-checkbox-label" [for]="pagina.pagId">{{pagina.pagNombre}}</label>
+                <div class=" row card-block text-center">
+                    <div class="col-md-12 col-lg-12">
+                        <div *ngIf="loadingPagi">
+                            <div class="text-center">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </li>
-              </cdk-virtual-scroll-viewport>
-            </ul>
-          </div>
-
-          <!-- <ng-scrollbar class="white-theme" thumbClass="white-scrollbars" #scrollable [invertX]="invertX" [invertY]="invertY" [trackX]="true" [compact]="compact" [shown]="hover" [disableOnBreakpoints]="false" [disabled]="disabled"> -->
-          <!-- <cdk-virtual-scroll-viewport class="list-container" [itemSize]="52.5">
-            <ul class="basic-list">
-              <li *cdkVirtualFor="let pagina of paginas; let i = index" class="list-group-item">
-                <p>
-                  <a [routerLink]="" (click)="viewPagi(pagina.pagId)">
-                    <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-70 align-top">
-                  </a>
-                </p>
-                <div class="border-checkbox-section">
-                  <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(pagina.pagId)">
-                    <input class="border-checkbox" type="checkbox" [id]="pagina.pagId">
-                    <label class="border-checkbox-label" [for]="pagina.pagId">{{pagina.pagNombre}}</label>
-                  </div>
+                    <div class="col-md-12 col-lg-12">
+                        <ul *ngIf="!loadingPagi" class="basic-list">
+                            <li>
+                                <div class="border-checkbox-section">
+                                    <div class="border-checkbox-group border-checkbox-group-primary">
+                                        <input [(ngModel)]="masterSelected" name="list_name" (change)="checkUncheckAll()" class="border-checkbox" type="checkbox" id="selectAll">
+                                        <label class="border-checkbox-label" for="selectAll">Seleccionar Todo</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="basic-list">
+                            <cdk-virtual-scroll-viewport style="height: 900px" itemSize="75">
+                                <li *cdkVirtualFor="let pagina of paginas" class="">
+                                    <p>
+                                        <a [routerLink]="" (click)="viewPagi(pagina.pagId)">
+                                            <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-60 z-depth-bottom-3">
+                                        </a>
+                                    </p>
+                                    <div class="border-checkbox-section">
+                                        <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(pagina.pagId)">
+                                            <input class="border-checkbox" [(ngModel)]="pagina.isSelected" name="list_name" type="checkbox" [id]="pagina.pagId" (change)="isAllSelected()">
+                                            <label class="border-checkbox-label" [for]="pagina.pagId">{{pagina.pagNombre}}</label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </cdk-virtual-scroll-viewport>
+                        </ul>
+                    </div>
                 </div>
-              </li>
-            </ul>
-          </cdk-virtual-scroll-viewport> -->
-          <!-- </ng-scrollbar> -->
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-8 col-md-12">
-      <div class="card ">
-        <div class="card-header">
-          <h5>
-            Visor
-            <span class="text-muted d-inline-block m-l-5">Pagina_1.jpg</span>
-          </h5>
-        </div>
-        <div class="card-block text-center">
-          <div *ngIf="loadingView">
-            <div class="text-center">
-              <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
             </div>
-          </div>
-          <img *ngIf="imageView" [src]="imageView" class="img-fluid z-depth-bottom-3" ngxViewer>
         </div>
-      </div>
+        <div class="col-xl-8 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h5>
+                        Visor
+                        <span *ngIf="paginaView" class="text-muted d-inline-block m-l-5">{{paginaView[0].pagNombre}}</span>
+                    </h5>
+                </div>
+                <div class="card-block text-center">
+                    <div *ngIf="loadingView">
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img *ngIf="paginaView" [src]="paginaView[0].urlPagi" class="img-fluid cursor z-depth-bottom-3" ngxViewer>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h5>Páginas</h5>
+                </div>
+                <div class=" row card-block text-center">
+                    <!-- <div class="col-md-12 col-lg-12">
+                        <div *ngIf="loadingPagi">
+                            <div class="text-center">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-md-12 col-lg-12">
+                        <!-- <ul *ngIf="!loadingPagi" class="basic-list">
+                            <li>
+                                <div class="border-checkbox-section">
+                                    <div class="border-checkbox-group border-checkbox-group-primary">
+                                        <input [(ngModel)]="masterSelected" name="list_name"
+                                            (change)="checkUncheckAll()" class="border-checkbox" type="checkbox"
+                                            id="selectAll">
+                                        <label class="border-checkbox-label" for="selectAll">Seleccionar Todo</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> -->
+                        <ul class="basic-list">
+                            <cdk-virtual-scroll-viewport style="height: 900px" itemSize="75">
+                                <li *cdkVirtualFor="let pagina of paginaSelect" class="">
+                                    <p>
+                                        <a [routerLink]="" (click)="viewPagi(pagina.pagId)">
+                                            <img [src]="pagina.urlPagi" [alt]="pagina.pagNombre" class="img-60 z-depth-bottom-3">
+                                        </a>
+                                    </p>
+                                    <div class="border-checkbox-section">
+                                        <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(pagina.pagId)">
+                                            <input class="border-checkbox" [(ngModel)]="pagina.isSelected" name="list_name" type="checkbox" [id]="pagina.pagId" (change)="isAllSelected()">
+                                            <label class="border-checkbox-label" [for]="pagina.pagId">{{pagina.pagNombre}}</label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </cdk-virtual-scroll-viewport>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-xl-2 col-md-12">
-      <div class="card ">
-        <div class="card-header">
-          <h5>Páginas Seleccionadas</h5>
-        </div>
-        <div class="card-block text-center">
-        </div>
-      </div>
-    </div>
-  </div>
 </div>

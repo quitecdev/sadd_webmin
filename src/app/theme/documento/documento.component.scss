@@ -1,9 +1,14 @@
-.basic-list{
-  label{
-    font-size: 0.85em;
-    font-weight: bold;
-  }
+.basic-list {
+    label {
+        font-size: 0.85em;
+        font-weight: bold;
+    }
 }
+
+.cursor {
+    cursor: pointer;
+}
+
 // $white: #F8F8F8;
 // ::ng-deep {
 //     ng-scrollbar.white-theme {
@@ -17,7 +22,6 @@
 //         }
 //     }
 // }
-
 // .example-item {
 //     height: 750px;
 // }

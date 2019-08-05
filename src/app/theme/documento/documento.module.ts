@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { DocumentoRoutingModule } from './documento-routing.module';
 import { DocumentoComponent } from './documento.component';
@@ -16,7 +17,8 @@ import { NgxViewerModule } from 'ngx-viewer';
     DocumentoRoutingModule,
     NgScrollbarModule,
     ScrollingModule,
-    NgxViewerModule
+    NgxViewerModule,
+    FormsModule
   ]
 })
 export class DocumentoModule { }

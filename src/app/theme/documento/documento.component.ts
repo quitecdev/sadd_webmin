@@ -14,20 +14,21 @@ export class DocumentoComponent implements OnInit {
 
   loadingPagi = false;
   loadingView = false;
+  masterSelected:boolean;
 
-  imageView = '';
   error = '';
   shown='hover';
 
   paginas: DocumentoPagi[];
-
-
+  paginaView:DocumentoPagi[];
+  paginaSelect:DocumentoPagi[];
 
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
     private _documentoService: DocumentoService
   ) {
+    this.masterSelected = false;
     this.paginas = [];
     this.getPagiDocumento(this._route.snapshot.paramMap.get("id"));
   }
@@ -43,10 +44,10 @@ export class DocumentoComponent implements OnInit {
       .subscribe(
         (response: DocumentoPagi[]) => {
           if (response === null) {
-            //this._router.navigateByUrl('/busqueda');
+            this._router.navigateByUrl('/busqueda');
           }
           else {
-            this.paginas = response;
+            this.listPage(response);
             this.viewPagi(this.paginas[0].pagId);
           }
           this.loadingPagi = false;
@@ -73,16 +74,49 @@ export class DocumentoComponent implements OnInit {
     return str;
   }
 
+  listPage(page:DocumentoPagi[]){
+    this.paginas=page;
+    for (var i = 0; i < this.paginas.length; i++) {
+      this.paginas[i].isSelected = this.masterSelected;
+    }
+  }
+
   viewPagi(_idPagi: number) {
     this.loadingView = true;
-    this.imageView = this.paginas.find(x => x.pagId == _idPagi).urlPagi;
+    this.paginaView=[];
+    this.paginaView.push(this.paginas.find(x => x.pagId == _idPagi));
     this.loadingView = false;
   }
 
   selectPagi(_idPagi: number) {
     this.loadingView = true;
-    this.imageView = this.paginas.find(x => x.pagId == _idPagi).urlPagi;
+    this.paginaView=[];
+    this.paginaView.push(this.paginas.find(x => x.pagId == _idPagi));
     this.loadingView = false;
+  }
+
+  checkUncheckAll(){
+    for (var i = 0; i < this.paginas.length; i++) {
+      this.paginas[i].isSelected = this.masterSelected;
+    }
+    this.getCheckedItemList();
+  }
+
+  isAllSelected() {
+    this.masterSelected = this.paginas.every(function(item:any) {
+        return item.isSelected == true;
+      })
+    this.getCheckedItemList();
+  }
+ 
+
+  getCheckedItemList(){
+    this.paginaSelect = [];
+    for (var i = 0; i < this.paginas.length; i++) {
+      if(this.paginas[i].isSelected)
+      this.paginaSelect.push(this.paginas[i]);
+    }
+    //this.checkedList = JSON.stringify(this.checkedList);
   }
 
 }
