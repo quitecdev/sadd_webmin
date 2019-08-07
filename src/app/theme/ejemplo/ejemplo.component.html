@@ -1,21 +1,21 @@
 <div class="page-body">
-    <div class="row">
-        <!-- sales start -->
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-block text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4" *ngFor="let img of images;let i=index">
-                                <img id="img{{i}}" class="img-fluid" crossOrigin="Anonymous" [src]="img.url">
-                            </div>
-                            <div class="col-md-12 mt-3">
-                                <button (click)="download()" class="btn btn-primary">Download PDF</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="row">
+    <!-- sales start -->
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-block text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 mt-3">
+                <button (click)="download()" class="btn btn-primary">Download PDF</button>
+              </div>
+              <div class="col-md-4" *ngFor="let img of paginaSelect;let i=index">
+                <img id="img{{i}}" class="img-fluid" crossOrigin="Anonymous" [src]="img.urlPagi">
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

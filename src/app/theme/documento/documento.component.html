@@ -61,7 +61,15 @@
                 <div class="card-header">
                     <h5>
                         Visor
-                        <span *ngIf="paginaView" class="text-muted d-inline-block m-l-5">{{paginaView[0].pagNombre}}</span>
+                        <span *ngIf="paginaView" class="text-muted d-inline-block m-l-5">
+                            <div class="border-checkbox-section">
+                                <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(paginaView[0].pagId)">
+                                    <input class="border-checkbox" [(ngModel)]="paginaView[0].isSelected" name="list_name" type="checkbox" [id]="paginaView[0].pagId" (change)="isAllSelected()">
+                                    <label class="border-checkbox-label" [for]="paginaView[0].pagId">{{paginaView[0].pagNombre}}</label>
+                                </div>
+                            </div>
+                          <!-- {{paginaView[0].pagNombre}} -->
+                        </span>
                     </h5>
                 </div>
                 <div class="card-block text-center">

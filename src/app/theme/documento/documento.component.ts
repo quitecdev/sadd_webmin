@@ -2,6 +2,7 @@ import { DocumentoPagi } from './../../models/documentoPagi';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { DocumentoService } from "../../services/documento.service";
+import { Observable, Observer } from 'rxjs';
 
 
 @Component({
@@ -108,7 +109,7 @@ export class DocumentoComponent implements OnInit {
       })
     this.getCheckedItemList();
   }
- 
+
 
   getCheckedItemList(){
     this.paginaSelect = [];
@@ -116,6 +117,7 @@ export class DocumentoComponent implements OnInit {
       if(this.paginas[i].isSelected)
       this.paginaSelect.push(this.paginas[i]);
     }
+    console.log(this.paginaSelect)
     //this.checkedList = JSON.stringify(this.checkedList);
   }
 
