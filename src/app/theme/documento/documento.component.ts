@@ -1,124 +1,130 @@
 import { DocumentoPagi } from './../../models/documentoPagi';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router, ActivatedRoute } from "@angular/router";
-import { DocumentoService } from "../../services/documento.service";
+import { Router, ActivatedRoute } from '@angular/router';
+import { DocumentoService } from '../../services/documento.service';
+import { DownloadService } from '../../services/download.service';
 import { Observable, Observer } from 'rxjs';
 
-
 @Component({
-  selector: 'app-documento',
-  templateUrl: './documento.component.html',
-  styleUrls: ['./documento.component.scss']
+	selector: 'app-documento',
+	templateUrl: './documento.component.html',
+	styleUrls: [ './documento.component.scss' ]
 })
 export class DocumentoComponent implements OnInit {
+	loadingPagi = false;
+	loadingView = false;
+	masterSelected: boolean;
 
+	error = '';
+	shown = 'hover';
 
-  loadingPagi = false;
-  loadingView = false;
-  masterSelected:boolean;
+	paginas: DocumentoPagi[];
+	paginaView: DocumentoPagi[];
+	paginaSelect: DocumentoPagi[];
 
-  error = '';
-  shown='hover';
+	constructor(
+		private _route: ActivatedRoute,
+		private _router: Router,
+		private _documentoService: DocumentoService,
+		private _downloadService: DownloadService
+	) {
+		this.masterSelected = false;
+		this.paginas = [];
+		this.getPagiDocumento(this._route.snapshot.paramMap.get('id'));
+	}
 
-  paginas: DocumentoPagi[];
-  paginaView:DocumentoPagi[];
-  paginaSelect:DocumentoPagi[];
+	ngOnInit() {}
 
-  constructor(
-    private _route: ActivatedRoute,
-    private _router: Router,
-    private _documentoService: DocumentoService
-  ) {
-    this.masterSelected = false;
-    this.paginas = [];
-    this.getPagiDocumento(this._route.snapshot.paramMap.get("id"));
-  }
+	getPagiDocumento(hex: string) {
+		let arcCod = this.hex_to_ascii(hex);
+		this.loadingPagi = true;
+		this._documentoService.getDocumentoPagi(arcCod).subscribe(
+			(response: DocumentoPagi[]) => {
+				if (response === null) {
+					this._router.navigateByUrl('/busqueda');
+				} else {
+					this.listPage(response);
+					this.viewPagi(this.paginas[0].pagId);
+				}
+				this.loadingPagi = false;
+			},
+			(error) => {
+				if (error.error.message === undefined) {
+					this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
+				} else {
+					this.error = error.error.message;
+				}
+				console.log(error);
+				this.loadingPagi = false;
+			}
+		);
+	}
 
-  ngOnInit() {
+	hex_to_ascii(hex: string) {
+		var hex = hex.toString();
+		var str = '';
+		for (var n = 0; n < hex.length; n += 2) {
+			str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+		}
+		return str;
+	}
 
-  }
+	listPage(page: DocumentoPagi[]) {
+		this.paginas = page;
+		for (var i = 0; i < this.paginas.length; i++) {
+			this.paginas[i].isSelected = this.masterSelected;
+		}
+	}
 
-  getPagiDocumento(hex: string) {
-    let arcCod = this.hex_to_ascii(hex);
-    this.loadingPagi = true;
-    this._documentoService.getDocumentoPagi(arcCod)
-      .subscribe(
-        (response: DocumentoPagi[]) => {
-          if (response === null) {
-            this._router.navigateByUrl('/busqueda');
-          }
-          else {
-            this.listPage(response);
-            this.viewPagi(this.paginas[0].pagId);
-          }
-          this.loadingPagi = false;
-        },
-        error => {
-          if (error.error.message === undefined) {
-            this.error = 'Ha ocurrido un error, contacte al administrador del sistema.';
-          }
-          else {
-            this.error = error.error.message;
-          }
-          console.log(error);
-          this.loadingPagi = false;
-        }
-      );
-  }
+	viewPagi(_idPagi: number) {
+		this.loadingView = true;
+		this.paginaView = [];
+		this.paginaView.push(this.paginas.find((x) => x.pagId == _idPagi));
+		this.loadingView = false;
+	}
 
-  hex_to_ascii(hex: string) {
-    var hex = hex.toString();
-    var str = '';
-    for (var n = 0; n < hex.length; n += 2) {
-      str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
-    }
-    return str;
-  }
+	selectPagi(_idPagi: number) {
+		this.loadingView = true;
+		this.paginaView = [];
+		this.paginaView.push(this.paginas.find((x) => x.pagId == _idPagi));
+		this.loadingView = false;
+	}
 
-  listPage(page:DocumentoPagi[]){
-    this.paginas=page;
-    for (var i = 0; i < this.paginas.length; i++) {
-      this.paginas[i].isSelected = this.masterSelected;
-    }
-  }
+	checkUncheckAll() {
+		for (var i = 0; i < this.paginas.length; i++) {
+			this.paginas[i].isSelected = this.masterSelected;
+		}
+		this.getCheckedItemList();
+	}
 
-  viewPagi(_idPagi: number) {
-    this.loadingView = true;
-    this.paginaView=[];
-    this.paginaView.push(this.paginas.find(x => x.pagId == _idPagi));
-    this.loadingView = false;
-  }
+	isAllSelected() {
+		this.masterSelected = this.paginas.every(function(item: any) {
+			return item.isSelected == true;
+		});
+		this.getCheckedItemList();
+	}
 
-  selectPagi(_idPagi: number) {
-    this.loadingView = true;
-    this.paginaView=[];
-    this.paginaView.push(this.paginas.find(x => x.pagId == _idPagi));
-    this.loadingView = false;
-  }
+	getCheckedItemList() {
+		this.paginaSelect = [];
+		for (var i = 0; i < this.paginas.length; i++) {
+			if (this.paginas[i].isSelected) this.paginaSelect.push(this.paginas[i]);
+		}
+		console.log(this.paginaSelect);
+		//this.checkedList = JSON.stringify(this.checkedList);
+	}
 
-  checkUncheckAll(){
-    for (var i = 0; i < this.paginas.length; i++) {
-      this.paginas[i].isSelected = this.masterSelected;
-    }
-    this.getCheckedItemList();
-  }
+	dowdownload() {
+		this._downloadService.getPdfDocument().subscribe(
+			(response) => {
+				//console.log(response);
+				var file = new Blob([response], {type: 'application/pdf'});
+				var fileURL = URL.createObjectURL(file);
 
-  isAllSelected() {
-    this.masterSelected = this.paginas.every(function(item:any) {
-        return item.isSelected == true;
-      })
-    this.getCheckedItemList();
-  }
-
-
-  getCheckedItemList(){
-    this.paginaSelect = [];
-    for (var i = 0; i < this.paginas.length; i++) {
-      if(this.paginas[i].isSelected)
-      this.paginaSelect.push(this.paginas[i]);
-    }
-    console.log(this.paginaSelect)
-    //this.checkedList = JSON.stringify(this.checkedList);
-  }
-
+				console.log(file);
+			},
+			(error) => {
+				console.log(error);
+			}
+		);
+	}
 }

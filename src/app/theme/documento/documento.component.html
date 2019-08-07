@@ -63,12 +63,16 @@
                         Visor
                         <span *ngIf="paginaView" class="text-muted d-inline-block m-l-5">
                             <div class="border-checkbox-section">
-                                <div class="border-checkbox-group border-checkbox-group-primary" (click)="selectPagi(paginaView[0].pagId)">
-                                    <input class="border-checkbox" [(ngModel)]="paginaView[0].isSelected" name="list_name" type="checkbox" [id]="paginaView[0].pagId" (change)="isAllSelected()">
-                                    <label class="border-checkbox-label" [for]="paginaView[0].pagId">{{paginaView[0].pagNombre}}</label>
+                                <div class="border-checkbox-group border-checkbox-group-primary"
+                                    (click)="selectPagi(paginaView[0].pagId)">
+                                    <input class="border-checkbox" [(ngModel)]="paginaView[0].isSelected"
+                                        name="list_name" type="checkbox" [id]="paginaView[0].pagId"
+                                        (change)="isAllSelected()">
+                                    <label class="border-checkbox-label"
+                                        [for]="paginaView[0].pagId">{{paginaView[0].pagNombre}}</label>
                                 </div>
                             </div>
-                          <!-- {{paginaView[0].pagNombre}} -->
+                            <!-- {{paginaView[0].pagNombre}} -->
                         </span>
                     </h5>
                 </div>
@@ -100,18 +104,13 @@
                         </div>
                     </div> -->
                     <div class="col-md-12 col-lg-12">
-                        <!-- <ul *ngIf="!loadingPagi" class="basic-list">
+                        <ul *ngIf="!loadingPagi" class="basic-list">
                             <li>
-                                <div class="border-checkbox-section">
-                                    <div class="border-checkbox-group border-checkbox-group-primary">
-                                        <input [(ngModel)]="masterSelected" name="list_name"
-                                            (change)="checkUncheckAll()" class="border-checkbox" type="checkbox"
-                                            id="selectAll">
-                                        <label class="border-checkbox-label" for="selectAll">Seleccionar Todo</label>
-                                    </div>
-                                </div>
+                                <button class="btn btn-inverse btn-block btn-sm" (click)="dowdownload()"><i
+                                        class="fa fa-cloud-download"></i>Border
+                                    Button</button>
                             </li>
-                        </ul> -->
+                        </ul>
                         <ul class="basic-list">
                             <cdk-virtual-scroll-viewport style="height: 900px" itemSize="75">
                                 <li *cdkVirtualFor="let pagina of paginaSelect" class="">
