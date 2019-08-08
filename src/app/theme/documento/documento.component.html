@@ -14,23 +14,31 @@
                 <div class="card-header">
                     <h5>Páginas</h5>
                 </div>
-                <div class=" row card-block text-center">
-                    <div class="col-md-12 col-lg-12">
-                        <div *ngIf="loadingPagi">
-                            <div class="text-center">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class=" card-block text-center">
                     <div class="col-md-12 col-lg-12">
                         <ul *ngIf="!loadingPagi" class="basic-list">
+                            <li>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Desde">
+                                    <input type="text" class="form-control" placeholder="Hasta">
+                                </div>
+                                <button class="btn btn-primary btn-block btn-sm">Agregar
+                                </button>
+                            </li>
                             <li>
                                 <div class="border-checkbox-section">
                                     <div class="border-checkbox-group border-checkbox-group-primary">
                                         <input [(ngModel)]="masterSelected" name="list_name" (change)="checkUncheckAll()" class="border-checkbox" type="checkbox" id="selectAll">
                                         <label class="border-checkbox-label" for="selectAll">Seleccionar Todo</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="row" *ngIf="loadingPagi">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="text-center">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
