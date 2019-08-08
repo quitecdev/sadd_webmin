@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import jsPDF from 'jspdf';
-import { Observable, Observer } from 'rxjs';
+import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-ejemplo',
@@ -121,57 +121,38 @@ export class EjemploComponent implements OnInit {
     }
   ]
 
-  constructor() {
+   constructor() {
 
   }
 
   ngOnInit() {
   }
 
-  //var base64 = (document.getElementById("imageid"));
-  download() {
-    let doc = new jsPDF("p", "mm", "a4");
-    var width = doc.internal.pageSize.getWidth();
-    var height = doc.internal.pageSize.getHeight();
-    for (var i = 0; i < this.paginaSelect.length; i++) {
-      this.getBase64ImageFromURL(this.paginaSelect[i].urlPagi).subscribe(base64data => {
-        console.log(i);
-        doc.addImage(base64data, 'JPEG', 0, 0, width, height);
-        doc.addPage();
-      });
-    }
-    doc.save('Test.pdf');
+  async createPdf() {
+
+    //Inicializo documento pdf
+    const pdfDoc = await PDFDocument.create();
+    // for (const pagina of this.paginaSelect) {
+      let jpgUrl = 'http://lorempixel.com/400/200/';
+      let jpgImageBytes = await fetch(jpgUrl).then((res) => res.arrayBuffer())
+      let jpgImage = await pdfDoc.embedJpg(jpgImageBytes);
+      console.log(jpgImage);
+      // let jpgDims = jpgImage.scale(0.5);
+      // let page = pdfDoc.addPage();
+      // page.drawImage(jpgImage, {
+      //   x: page.getWidth() / 2 - jpgDims.width / 2,
+      //   y: page.getHeight() / 2 - jpgDims.height / 2 + 250,
+      //   width: jpgDims.width,
+      //   height: jpgDims.height,
+      // });
+    // }
+    //const pdfBytes = await pdfDoc.save();
+    //this.downLoadFile(pdfBytes, 'application/pdf')
   }
 
-  getBase64ImageFromURL(url: string) {
-    return Observable.create((observer: Observer<string>) => {
-      let img = new Image();
-      img.crossOrigin = 'Anonymous';
-      img.src = url; img.src = url;
-      if (!img.complete) {
-        img.onload = () => {
-          observer.next(this.getBase64Image(img));
-          observer.complete();
-        };
-        img.onerror = (err) => {
-          observer.error(err);
-        };
-      } else {
-        observer.next(this.getBase64Image(img));
-        observer.complete();
-      }
-    });
-  }
-
-  getBase64Image(img: HTMLImageElement) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-    var dataURL = canvas.toDataURL("image/png");
-    //return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-    return dataURL;
+  downLoadFile(data: any, type: string) {
+    var blob = new Blob([data], { type: type });
+    FileSaver.saveAs(blob, 'ejemplo.pdf');
   }
 
 }
