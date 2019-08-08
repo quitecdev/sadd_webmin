@@ -72,7 +72,6 @@
                                         [for]="paginaView[0].pagId">{{paginaView[0].pagNombre}}</label>
                                 </div>
                             </div>
-                            <!-- {{paginaView[0].pagNombre}} -->
                         </span>
                     </h5>
                 </div>
@@ -94,21 +93,21 @@
                     <h5>Páginas</h5>
                 </div>
                 <div class=" row card-block text-center">
-                    <!-- <div class="col-md-12 col-lg-12">
-                        <div *ngIf="loadingPagi">
-                            <div class="text-center">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-md-12 col-lg-12">
                         <ul *ngIf="!loadingPagi" class="basic-list">
                             <li>
-                                <button class="btn btn-inverse btn-block btn-sm" (click)="dowdownload()"><i
-                                        class="fa fa-cloud-download"></i>Border
-                                    Button</button>
+                                <button [ngClass]="{'btn-disabled disabled': !paginaSelect.length > 0}" class="btn btn-primary btn-block btn-sm" (click)="dowdownload()"><i
+                                        class="fa fa-cloud-download"></i>Descargar
+                                </button>
+                            </li>
+                            <li *ngIf="loadingDownload">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="text-center">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                         <ul class="basic-list">

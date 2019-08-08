@@ -14,27 +14,14 @@ export class DownloadService {
     this.url = GLOBAL.url;
   }
 
-  getPdfDocument(pagiSelect: DocumentoPagi[]) {
-    let params = JSON.stringify(pagiSelect);
-    var user = JSON.parse(localStorage.getItem("currentUser"));
-    const headers = new HttpHeaders({
-      'Authorization': 'Bearer ' + user.token,
-      'Content-Type': 'application/json',
-    });
-    return this._http.post(this.url + 'download', params, { headers });
-  }
-
-  public downloadReport(pagiSelect: DocumentoPagi[]): Observable<any> {
+  public getPdfDocument(pagiSelect: DocumentoPagi[]): Observable<any> {
     // Create url
-    let url = this.url + 'download';
-    var body = { pagiSelect };
     var user = JSON.parse(localStorage.getItem("currentUser"));
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + user.token,
       'Content-Type': 'application/json'
     });
-
-    return this._http.post(url, body, {
+    return this._http.post(this.url + 'download', pagiSelect, {
       responseType: "blob",
       headers
     });
