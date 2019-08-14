@@ -9,6 +9,15 @@
               <div class="col-md-12 mt-3">
                 <button (click)="createPdf()" class="btn btn-primary">Download PDF</button>
               </div>
+              <div class="col-md-12 mt-3" *ngIf="loadingDownload">
+                <div class="col-md-12 col-lg-12">
+                  <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

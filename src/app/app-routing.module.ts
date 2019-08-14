@@ -11,7 +11,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dashboard',
+        //redirectTo: 'dashboard',
+        redirectTo:'ejemplo',
         pathMatch: 'full',
         canActivate: [AuthGuard]
       },

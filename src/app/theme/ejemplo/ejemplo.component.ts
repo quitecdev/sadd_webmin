@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { PDFDocument, PDFImage } from 'pdf-lib';
 import * as FileSaver from 'file-saver';
+import { Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-ejemplo',
@@ -119,40 +120,83 @@ export class EjemploComponent implements OnInit {
       "pagTamano": 112065,
       "isSelected": true
     }
-  ]
+  ];
 
-   constructor() {
+  base64Image: any;
+
+  loadingDownload=false;
+
+
+  constructor() {
 
   }
 
   ngOnInit() {
+    let imageUrl = 'https://i.imgur.com/hdcbPeO.jpg';
+    this.getBase64ImageFromURL(imageUrl).subscribe(base64data => {
+      console.log(base64data);
+      this.base64Image = 'data:image/jpg;base64,' + base64data;
+    });
   }
 
   async createPdf() {
-
     //Inicializo documento pdf
+    this.loadingDownload=true;
     const pdfDoc = await PDFDocument.create();
-    // for (const pagina of this.paginaSelect) {
-      let jpgUrl = 'http://lorempixel.com/400/200/';
-      let jpgImageBytes = await fetch(jpgUrl).then((res) => res.arrayBuffer())
+    for (var _i = 0; _i < 3069; _i++) {
+
+      let jpgUrl = 'https://i.imgur.com/hdcbPeO.jpg';
+      let jpgImageBytes = await fetch(jpgUrl).then((res) => res.arrayBuffer());
       let jpgImage = await pdfDoc.embedJpg(jpgImageBytes);
-      console.log(jpgImage);
-      // let jpgDims = jpgImage.scale(0.5);
-      // let page = pdfDoc.addPage();
-      // page.drawImage(jpgImage, {
-      //   x: page.getWidth() / 2 - jpgDims.width / 2,
-      //   y: page.getHeight() / 2 - jpgDims.height / 2 + 250,
-      //   width: jpgDims.width,
-      //   height: jpgDims.height,
-      // });
-    // }
-    //const pdfBytes = await pdfDoc.save();
-    //this.downLoadFile(pdfBytes, 'application/pdf')
+
+      const jpgDims = jpgImage.scale(0.5)
+
+      let page = pdfDoc.addPage();
+      page.drawImage(jpgImage, {
+        x: page.getWidth() / 2 - jpgDims.width / 2,
+        y: page.getHeight() / 2 - jpgDims.height / 2 + 250,
+        width: jpgDims.width,
+        height: jpgDims.height,
+      });
+    }
+    const pdfBytes = await pdfDoc.save();
+    this.downLoadFile(pdfBytes, 'application/pdf');
+    this.loadingDownload=false;
   }
 
   downLoadFile(data: any, type: string) {
     var blob = new Blob([data], { type: type });
     FileSaver.saveAs(blob, 'ejemplo.pdf');
+  }
+
+  getBase64ImageFromURL(url: string) {
+    return Observable.create((observer: Observer<string>) => {
+      let img = new Image();
+      img.crossOrigin = 'Anonymous';
+      img.src = url;  img.src = url;
+      if (!img.complete) {
+        img.onload = () => {
+          observer.next(this.getBase64Image(img));
+          observer.complete();
+        };
+        img.onerror = (err) => {
+          observer.error(err);
+        };
+      } else {
+        observer.next(this.getBase64Image(img));
+        observer.complete();
+      }
+    });
+  }
+
+  getBase64Image(img: HTMLImageElement) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
   }
 
 }
